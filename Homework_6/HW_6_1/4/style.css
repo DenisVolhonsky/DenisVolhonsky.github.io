@@ -1,0 +1,8 @@
+p {
+	font-family: sans-serif;
+}
+p:first-letter {
+	font-size: 2em;
+	color: red;
+	font-family: Georgia;
+} 

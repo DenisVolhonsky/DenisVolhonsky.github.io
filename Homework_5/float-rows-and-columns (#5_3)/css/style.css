@@ -1,0 +1,15 @@
+.parent {
+  width: 440px;
+  min-height: 20px;
+  background: #FF6600;
+}
+.rows {
+  width: 100px;
+  height: 100px;
+  background: #00F1FF;
+  margin: 5px;
+  float: left;
+}
+.save_area {
+  clear: both;
+}

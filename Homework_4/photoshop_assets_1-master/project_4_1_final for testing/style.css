@@ -1,0 +1,92 @@
+.frame {
+    margin: 30px auto;
+    box-sizing: border-box;
+    width: 380px;
+    height: 530px;
+    border: 2px solid black;
+    position: relative;
+    font-family: Tahoma;
+}
+
+h3 {
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+h3>span {
+    display: block;
+}
+
+.product-image {
+    margin-top: 25px;
+    text-align: center;
+}
+.product-image img {
+    display: inline-block;
+    width: 250px;
+    height: 288px;
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.loan {
+    margin-bottom: 17px;
+}
+
+.price {
+    margin-bottom: 19px;
+    padding-left: 19px;
+    font-size: 32px;
+    text-align: center;
+}
+
+.buy {
+    margin-bottom: 8px;
+    padding-right: 25px;
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    box-shadow: -2px 2px 5px 0px #9c9c9c;
+}
+
+.btn-small {
+    padding-right: 15px;
+    width: 190px;
+    height: 31px;
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.btn-big {
+    width: 228px;
+    height: 46px;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.btn-green {
+    color: white;
+    background-color: #8bc144;
+}
+
+.btn-red {
+    color: white;
+    background-color: #ff0000;
+}

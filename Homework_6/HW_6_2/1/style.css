@@ -1,0 +1,13 @@
+
+table {
+	border-collapse: collapse;
+	font-family: sans-serif;
+}
+ td, th {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+    text-align: center;
+}
+.pos_left {
+	 text-align: left;
+}

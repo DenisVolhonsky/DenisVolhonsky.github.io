@@ -1,0 +1,35 @@
+.pic {
+background: #80CDC6;
+height: 500px;
+width: 600px;
+margin: 30px auto;
+overflow:hidden;
+position: relative;
+}
+.world, .water, .clouds, .ship, .wood {
+position: absolute;
+}
+.world {
+width: 608px;
+left: 0;
+bottom: 0;
+z-index: 1;
+}
+.water {
+left: 0;
+bottom: 0;
+width: 600px;
+z-index: 3;
+}
+.clouds {
+height: 400px;
+width: 400px;
+top: -139px;
+left: 100px;
+}
+.ship {
+width: 126px;
+bottom: 40px;
+left: 25px;
+z-index: 2;
+}

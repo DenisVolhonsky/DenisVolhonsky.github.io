@@ -1,0 +1,7 @@
+p {
+	font-family: sans-serif;
+}
+p:after {
+	content: '*';
+	color: red;
+}

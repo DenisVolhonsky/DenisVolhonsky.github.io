@@ -1,0 +1,79 @@
+body {
+background: #d1d1d1;
+font-family: sans-serif;
+}
+.main {
+height: 1400px;
+width: 640px;
+background: #ffffff;
+margin: 20px auto;
+}
+.header_bg {
+width: 640px;
+}
+span {
+display: block;
+margin-left: 30px;
+}
+.friends {
+text-align: center;
+margin-bottom: 20px;
+margin-left: 20px;
+font-size: 20px;
+}
+.text {
+margin-left: 20px;
+}
+.prod_2_inline, .prod_3_inline {
+text-align: center;
+}
+
+.card, .image, .info, .btn {
+display: inline-block;
+width: 256px;
+}
+.card-right{
+margin-left: 30px;
+}
+.card_1, .image_1, .info_1, .btn_1 {
+display: inline-block;
+width: 160px;
+}
+
+.info, .info_1 {
+margin-top: 10px;
+margin-bottom: 20px;
+}
+.btn-style {
+border: none;
+background: none;
+box-shadow: none;
+cursor: pointer;
+font-weight: 700;
+}
+.btn, .btn_1 {
+height: 40px;
+margin-bottom: 27px;
+background-color: #cf5b4e;
+color: white;
+border-radius: 5px;
+}
+.btn,
+.btn_1:hover {
+box-shadow: -2px 2px 5px 0px #9c9c9c;
+}
+.btn_width {
+margin-left: 30px;
+width: 90%;
+margin-top: 40px;
+}
+.err, .err>a {
+text-align: center;
+color: white;
+font-weight: bold;
+font-size: 10px;
+}
+.low_info {
+width: 600px;	
+margin-left: 20px;	
+}

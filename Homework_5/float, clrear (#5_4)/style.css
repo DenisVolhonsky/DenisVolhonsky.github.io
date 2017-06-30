@@ -1,0 +1,41 @@
+.fullwrap {
+	width: 400px;
+	height: 500px;
+	border: 1px solid black;
+	margin: 10px;
+	padding: 10px;
+}
+.header	{
+	border: 1px solid black;
+	height: 100px;
+}
+
+.wrap {
+	border: 1px solid black;
+	height: 300px;	
+	margin-top: 10px;
+	
+}
+.sidebar {
+	border: 1px solid black;
+	margin: 7px;	
+	height: 280px;
+	width: 210px;
+	float: left;
+}	
+.main {
+	border: 1px solid black;
+	margin: 7px;	
+	height: 280px;
+	width: 155px;
+	float: left;
+
+}
+.repair {
+	clear: both;	
+}
+.footer {
+	margin-top: 10px;
+	border: 1px solid black;
+	height: 75px;
+}

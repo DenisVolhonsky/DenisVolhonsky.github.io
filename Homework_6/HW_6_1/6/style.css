@@ -1,0 +1,8 @@
+p {
+	font-family: sans-serif;
+}
+p:before {
+	content: "\2602";
+	color: green;
+	font-size: 2em;
+}

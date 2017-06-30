@@ -1,0 +1,61 @@
+
+.form {
+	display: inline-block;
+	border: 1px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px grey;
+	padding: 7px;
+	margin: 50px auto;
+	font-family: sans-serif;
+	font-size: 12px;
+
+}
+table {
+	border-collapse: collapse;
+}
+
+th, td {
+	padding: 15px;
+	border-bottom: 1px solid grey;
+	text-align: left;
+}
+.name {
+	color: #E7242A;
+}
+.plus, .minus {
+	margin-right: 2px;	
+	background: #E7242A;
+	color: white;
+	border: 1px solid #DC4E45;
+	font-size: 18px;
+	width: 25px;
+	height:25px;
+}
+.delete {
+	background: #DC4E45;
+	color: white;
+	margin-right: 20px;
+	border: 1px solid #DC4E45;
+	font-size: 12px;
+	font-family: 'Oswald',sans-serif;	
+	width: 64px;
+	height:25px;	
+}
+.sum_discount, .sum {
+	text-align: right; 
+	margin-bottom: -7px;
+}
+.sum  {
+	color: grey;
+}
+.bucket {
+	text-align: center;
+} 
+a {
+	font-family: sans-serif;
+	font-style: italic;
+	color: #DC4E45;
+	font-stretch: condensed;
+	font-size: 16px;
+	text-decoration: none;
+}

@@ -1,0 +1,57 @@
+body {
+background: grey;
+}
+.chess_desk {
+width: 600px;
+height: 600px;
+background: white;
+margin: 70px auto;
+position: relative;
+}
+.square_1,
+.square_1_2,
+.square_2,
+.square_3,
+.square_3_1 {
+width: 200px;
+height: 200px;
+background: #850000;
+position: absolute;
+}
+img {
+width: 200px;
+height: 200px;
+position: absolute;
+}
+.square_1 {
+top: 0;
+left: 0;
+}
+.bishop {
+top: 0;
+left: 200px;
+}
+.square_1_2 {
+top: 0;
+right: 0;
+}
+.knight {
+top: 200px;
+left: 0;
+}
+.square_2 {
+top: 200px;
+left: 200px;
+}
+.square_3 {
+bottom: 0;
+left: 0;
+}
+.rook {
+bottom: 0;
+left: 200px;
+}
+.square_3_1 {
+bottom: 0;
+right: 0;
+}

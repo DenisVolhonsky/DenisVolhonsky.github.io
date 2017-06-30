@@ -1,0 +1,30 @@
+.p1, .p2 {
+	border: 1px solid black;
+	font-weight: 700;
+	text-align: center;
+	width: 500px;
+	margin: 30px auto;
+	padding: 10px;
+
+}
+
+.p1 {
+	background: green;
+}
+.p1:hover {
+	background: yellow;
+}
+.p1:active {
+	background: red;
+}
+.p2 {
+	background: violet;
+}
+.p2:hover {
+	background: brown;
+}
+.p2:active {
+	background: gold;
+}
+
+

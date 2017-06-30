@@ -1,0 +1,4 @@
+input:focus {
+	border: 3px solid green;
+	border-radius: 5px;
+}

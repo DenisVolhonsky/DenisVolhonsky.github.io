@@ -1,0 +1,16 @@
+.block {
+	width: 80px;
+	height: 40px;
+	background: black;
+	margin: 50px auto;
+	position: relative;
+}
+.block:before {
+	content: '';
+	position: absolute;
+	left: -30px; 
+	top: 10px;
+    border: 10px solid transparent;
+    border-right: 20px solid black;
+}
+
