@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.wrap {
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1200px;
+}
+header {
+	height: 100px;
+	background: #FF9800;
+	padding: 10px;
+}
+header>p {
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+.main_block {
+	background: #FFDD00;
+}
+.london,
+.paris,
+.tokyo {
+	width: 33.3333%;
+	padding: 1%;
+	float: left;
+}	
+img {
+	margin: 2px;
+	width: 48%;
+	float: left;
+}
+.clearfix {
+	clear: both;
+}
+h1 {
+	padding: 20px 0 20px 0; 
+}
+@media screen and (max-width: 960px) {
+	img {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 720px) {
+	img {
+		width: 100%;
+	}
+	.london, .paris, .tokyo {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 480px) {
+	img {
+		width: 100%;
+	}
+	.london, .paris, .tokyo {
+		width: 100%;
+		overflow: hidden;
+	}
+	header>p, h1 {
+	font-size: 17px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+	span, p {
+		font-size: 12px;
+	}
+
+	header {
+		padding: 6px;
+		overflow: hidden;
+	}
+	h1 {
+		padding: 10px 0 10px 0; 
+	}
+}
