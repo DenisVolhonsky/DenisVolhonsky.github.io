@@ -8,7 +8,7 @@
 	width: 80%;
 	margin: 0 auto;
 	max-width: 1200px;
-	height: 1000px;
+	height: 450px;
 }
 header {
 	height: 100px;
@@ -20,7 +20,7 @@ h1 {
 } 
 li {
 	list-style: none;
-	padding: 1%;
+	padding: 4%;
 	border-bottom: 1px solid #F1F1F1;
 }
 a {
@@ -35,17 +35,22 @@ a {
 	margin-top: 1.5%;
 }
 .list {
-	width: 19.5%;
+	width: 18.5%;
 }
 .main_article {
-	width: 59%;
+	width: 60%;
 }
-h2, h3 {
-margin: 2%;
+h3 {
+	margin: 6% 6% 6% 0;
+}
+h2{
+	margin: 3%;
 }
 .aside {
 	width: 19.5%;
 	background: #CBEEF4;
+	padding: 1%;
+	margin-right: 0;
 }
 img {
 	margin-top: 2%;
