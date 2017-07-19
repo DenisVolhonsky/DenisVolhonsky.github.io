@@ -1,0 +1,22 @@
+
+.container {
+	margin: 50px auto;
+}
+.row .col{
+	padding: 2px;
+}
+.internal {
+background: #0B334C;
+margin: 1px;
+color: white;
+font-size: 20px;
+
+}
+.first {
+	font-size: 45px;
+	text-align: center;
+	padding: 40px;
+}
+.other {
+	padding: 40px;
+}

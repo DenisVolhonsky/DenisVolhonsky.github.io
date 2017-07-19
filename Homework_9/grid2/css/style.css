@@ -1,0 +1,67 @@
+h1 {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+.col7 {
+    width: 14.285%;
+    float: left;
+    text-align: center;
+    border-right: 1px solid white;
+    margin-top: 12px;
+    background: #404850;
+}
+.col7 a {
+    color: white;
+    display: block;
+}
+.s3.logo {
+    min-height: 47px;
+    line-height: 47px;
+    color: white;
+}
+h5 {
+    display: block;
+    font-size: 5px;
+    text-align: center;
+}
+.col.s9 {
+    padding-right: 0;
+    padding-left: 0;
+}
+.links a {
+    color: black;
+    display: block;
+    min-width: 30px;
+    text-align: center;
+}
+.col.s4.name {
+    padding: 0;
+}
+.image1,
+.image2,
+.image3,
+.image4,
+.image5 {
+    min-height: 140px;
+    background: #404850;
+    line-height: 140px;
+    text-align: center;
+    color: white;
+}
+.colnav {
+    color: white;
+    text-align: center;
+    height: 727px;
+    border-right: 10.5px solid white;
+    background: #404850;
+}
+.logo {
+    border-right: 10.5px solid white;
+    background: #404850;
+}
