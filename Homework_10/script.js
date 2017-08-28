@@ -61,11 +61,9 @@ function birth() {
 
     var a = new Date();
     if (inpBirth >= 1800 && inpBirth <= 2017) {
-        console.log(2017 - inpBirth);
         age = 2017 - inpBirth;
     }
-    else if (inpBirth >= 0 && inpBirth <= 17) {
-        console.log(17 - inpBirth);
+    else if (inpBirth > 0 && inpBirth < 17) {
         age = 17 - inpBirth;
     }
     else {
@@ -75,7 +73,7 @@ function birth() {
     if (age >= 16) {
         console.log('Добро пожаловать, ваш возраст:' + age);
     }
-    else {
+    else if (age > 0 && age <= 16){
         console.log('Вход воспрещен ваш возраст:' + age);
     }
 }
