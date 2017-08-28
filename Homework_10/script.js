@@ -63,7 +63,7 @@ function birth() {
     if (inpBirth >= 1800 && inpBirth <= 2017) {
         age = 2017 - inpBirth;
     }
-    else if (inpBirth > 0 && inpBirth < 17) {
+    else if (inpBirth >= 0 && inpBirth < 17) {
         age = 17 - inpBirth;
     }
     else {
