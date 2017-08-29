@@ -60,11 +60,14 @@ function birth() {
     inpBirth = document.getElementById('numAge').value;
 
     var a = new Date();
-    if (inpBirth >= 1800 && inpBirth <= 2017) {
+    if (inpBirth >= 1900 && inpBirth <= 2017) {
         age = 2017 - inpBirth;
     }
-    else if (inpBirth >= 0 && inpBirth < 17) {
+    else if (inpBirth >= 0 && inpBirth <= 17) {
         age = 17 - inpBirth;
+    }
+    else if (inpBirth >= 50 && inpBirth <= 99) {
+        age = 117 - inpBirth;
     }
     else {
         console.log('Вы ввели не верный год своего рождения');
@@ -73,7 +76,7 @@ function birth() {
     if (age >= 16) {
         console.log('Добро пожаловать, ваш возраст:' + age);
     }
-    else if (age > 0 && age <= 16){
+    else if (age >= 0 && age <= 16){
         console.log('Вход воспрещен ваш возраст:' + age);
     }
 }
