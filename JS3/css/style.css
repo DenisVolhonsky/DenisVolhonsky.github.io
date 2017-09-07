@@ -1,0 +1,19 @@
+.form {
+    padding: 10px;
+    margin: 50px;
+    width: 700px;
+}
+#arr{
+	font-size: 25px;
+	font-weight: 700;
+	color: #fff;
+	right: 20px;
+	top: 20px;
+	position: fixed;
+	background: #26A69A;
+	padding: 20px;
+}
+
+input {
+	width: 300px;
+}
