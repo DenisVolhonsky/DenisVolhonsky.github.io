@@ -1,0 +1,73 @@
+body {
+	background: #E2D9D9;
+}
+.one {
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	margin: 10px;
+}
+
+.folder {
+	width: 100px;
+	height: 100px;
+	 background: url(images/folder.png);
+	 background-size: 100% 100%;
+}
+
+.block {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	margin: 10px;
+	background: #89A5E2;
+}
+
+.m-img {
+	width: 128px;
+}
+.start {
+	position: relative;
+	width: 250px;
+	height: 350px;
+	background: lime;
+}
+.move-block {
+	position: absolute;
+	top: 0;
+	left: 100px;
+	width: 50px;
+	height: 50px;
+	background: gold;
+	text-align: center;
+
+}
+.erase {
+	position: absolute;
+	width: 50px;
+	height: 0;
+	left: 100px;
+	background: #E2D9D9;
+}
+#trigger {
+	position: relative;
+	width: 285px;
+	height: 100px;
+	background: #2E3E4E;
+	margin: 50px auto;
+	padding: 3px;
+	border-radius: 10px; 
+}
+#switch {
+	position: absolute;
+	width: 94px;
+	height: 94px;
+	border: 3px solid black;
+	border-radius: 10px; 
+	background: #E79262;
+	left: 0;
+}
+
+
+
