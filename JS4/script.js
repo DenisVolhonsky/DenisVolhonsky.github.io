@@ -97,7 +97,7 @@ function access(age) {
 		console.log('Введите возраст');
 	}
 }
-access(100);
+access(15);
 
 // Задача 9. Создайте функцию, которая считает длину массива и возвращает
 // ее в виде числа. Массив в функцию передается как аргумент. 
@@ -120,31 +120,16 @@ masLength(mas);
 // что число меньше 7. Если 8, 9 – то возвращает соответственно 7 или 8. 
 // Реализуйте решение с несколькими return.
 
-document.getElementById('compare').onclick = run;
-
-
-function numCompare(x) {
-
-var inpnum = document.getElementById('inpnum');
-
-   if (x>10) {
-        return x*x;
-    }
-
-   else if (x<7) {
-        return 'число меньше 7';
-    }
-
-   else if (x==8 || x==9) {
-        return x;
-    }
-    else {
-      return 0;
-    }
+document.getElementById('compare').onclick = function() {
+	var inpnum = document.getElementById('inpnum').value;
+	console.log(define(inpnum));
 }
 
-function run() {
-  console.log(numCompare(inpnum.value));
+ function define(x) {
+   if (x>10) return x*x;      
+   else if (x<7) return 'число меньше 7';
+   else if (x==8 || x==9) return x-1
+   else return x;
 }
 
 // Задача 11. Напишите игру «Угадай число». 
