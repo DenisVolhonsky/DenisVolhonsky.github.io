@@ -1,8 +1,9 @@
 // Задание 1. Вычитайте строку из input. Высчитайте ее длину. Выведите результат.
 document.getElementById('rez1').onclick = function () {
     var str = document.getElementById('str').value;
-    console.log('Задача №1: Длинна строки равна '+ str.length +' символов(а)');
+    
     document.getElementById('str').value = '';
+    document.getElementById('out1').innerHTML += 'длинна строки равна '+ str.length +' символов(а)';
 }
 
 // Задание 2. Создайте массив, который содержит имена изображений в определенной папке.
@@ -21,11 +22,11 @@ for(var i=0; i<imageName.length; i++) {
 document.getElementById('short-link').onclick = function () {
     var str = document.getElementById('link').value;
 
-    if (str.search('http://') != -1)
-     console.log(str.replace('http://', ''));
-    else if(str.search('https://') != -1)
-     console.log(str.replace('https://', ''));
-    else console.log(str);
+    if (str.search('http://') !== -1)
+        document.getElementById('out3').innerHTML += str.replace('http://', '');
+    else if(str.search('https://') !== -1)
+        document.getElementById('out3').innerHTML += str.replace('https://', '');
+    else document.getElementById('out3').innerHTML += str;
 }
 
 // Задание 4. Пользователь может ввести адрес сайта 
@@ -35,17 +36,17 @@ document.getElementById('short-link').onclick = function () {
 document.getElementById('domen').onclick = function () {
     var str = document.getElementById('any-link').value;
 
-    if (str.search('http://') != -1) {
-    	if(str.search('www.') != -1) console.log(str.replace('http://www.', ''));
-    	else console.log(str.replace('http://', ''));
+    if (str.search('http://') !== -1) {
+    	if(str.search('www.') !== -1) document.getElementById('out4').innerHTML += str.replace('http://www.', '');
+    	else document.getElementById('out4').innerHTML +=str.replace('http://', '');
     }
-    else if (str.search('https://') != -1) {
-    	if(str.search('www.') != -1) console.log(str.replace('https://www.', ''));
-    	else console.log(str.replace('https://', ''));	
+    else if (str.search('https://') !== -1) {
+    	if(str.search('www.') !== -1) document.getElementById('out4').innerHTML += str.replace('https://www.', '');
+    	else document.getElementById('out4').innerHTML += str.replace('https://', '');	
     }
-    else if (str.search('www.') != -1)
-    	console.log(str.replace('www.', ''));  
-    else console.log(str);
+    else if (str.search('www.') !== -1)
+    	document.getElementById('out4').innerHTML +=str.replace('www.', '');  
+    else document.getElementById('out4').innerHTML += str ;
 }
 
 // Задание 5. Пользователь заполняет форму состоящую из фамилии, имени пароля и email.
@@ -64,22 +65,24 @@ document.getElementById('validation').onclick = function () {
     password = password.trim();
     email = email.trim();
 
-   	if (password.length >= 5 && email.search('@') != -1 && email.search(' ') == -1)
-    	console.log('Validation completed');
-    else if (surname.length == 0)
-    	console.log('Enter you surname');
-     else if (name.length == 0)
-    	console.log('Enter you name');
+   	if (password.length >= 5 && email.search('@') !== -1 && email.search(' ') === -1)
+    	alert('Validation completed');
+    else if (surname.length === 0)
+    	alert('Enter you surname');
+     else if (name.length === 0)
+    	alert('Enter you name');
 	else if (password.length < 5)
-		console.log('Wrong password');
-	else if (email.search('@') == -1 && email.search(' ') == -1)
-		console.log('Wrong e-mail');
+		alert('Wrong password');
+	else if (email.search('@') === -1 && email.search(' ') === -1)
+		alert('Wrong e-mail');
 }
+
+
 
 // Задание 6. Пользователь вводит символ, выведите его код.
 document.getElementById('code').onclick = function () {
     var char = document.getElementById('char').value;
-
-	console.log('Код символа: '+ char +' равен: &#'+ char.charCodeAt(0) +';');
+    var code = char.charCodeAt(0);
+	alert('&#'+ code);
 	document.getElementById('char').value = '';
 }
