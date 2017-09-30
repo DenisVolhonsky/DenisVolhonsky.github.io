@@ -30,7 +30,7 @@ document.getElementById('number_p').onclick = function() {
 	var numberP = document.getElementsByTagName('p');
 
 	for (var i=0; i<numberP.length; i++) {
-		var num=i+1;
+		var num =i+1;
 		numberP[i].insertAdjacentHTML('afterBegin', num +') ');
 	}
 }
@@ -44,9 +44,9 @@ document.getElementById('number_p1').onclick = pushBtn;
 document.getElementById('number_p2').onclick = pushBtn;
 
 function pushBtn() { 
-	if(this.id=='number_p1')
+	if(this.id==='number_p1')
         document.getElementById('click1').innerHTML = 'нажата '+ count1++ +' раз(а)';
-    else if (this.id=='number_p2')
+    else if (this.id==='number_p2')
     	document.getElementById('click2').innerHTML = 'нажата '+ count2++ +' раз(а)';
 }
 
@@ -60,7 +60,8 @@ document.getElementById('rezult').onclick = mathPow;
 function mathPow() {
 	var digit = document.getElementById('inp').value;
     var pow = document.getElementById('inp1').value;
-	alert(Math.pow(digit,pow));	
+	out5.innerHTML += digit +'^'+ pow +' = '+ Math.pow(digit,pow);
+
 }
 
 
@@ -69,13 +70,13 @@ function mathPow() {
 // При вызове функции, она подчеркивает все элементы на странице с данным тегом. 
 // Т.е. если пользователь вызвал функцию с параметром ‘p’ – то подчеркиваются абзацы.
 
-function tagDecoration(s) {
-	var element = document.getElementsByTagName(s);
+document.getElementById('underline').onclick = function() {
+	var element = document.getElementsByTagName('h4');
 	for(i=0; i<element.length; i++) {
 			element[i].style.textDecoration = 'underline';
 	}
 }
-tagDecoration('h4');
+
 
 // Задача 7. Функция принимает параметр - возраст пользователя.
 // Если число больше 16 – то выводим «добро пожаловать», если меньше – “вы еще молоды”.
@@ -86,34 +87,37 @@ tagDecoration('h4');
 // Реализуйте два вида проверки наличия аргумента – проверка на undefined 
 // и оператор ||.
 
-function access(age) {
+document.getElementById('rezult8').onclick = function() {
+
+var age = document.getElementById('age').value;
+var rezult = document.getElementById('out8');
+
 	if (age>16) {
-		console.log('Добро пожаловать');
+		rezult.innerHTML += 'Добро пожаловать!';
 	}
 	else if(age<=16 && age>0) {
-		console.log('Вы еще молоды');
+		rezult.innerHTML += 'Вы еще молоды!';
 	}
-	else if (age==undefined || age==0 || age<0) {
-		console.log('Введите возраст');
+	else if (age==='' || age==='0' || age<0) {
+		rezult.innerHTML +='Введите возраст!';
 	}
 }
-access(15);
 
 // Задача 9. Создайте функцию, которая считает длину массива и возвращает
 // ее в виде числа. Массив в функцию передается как аргумент. 
 // Если аргумент не задан – выводится сообщение об ошибке.
 
-var mas=[1,4,7,8,45,2,5,8,2,9];
+var rez9 = document.getElementById('out9');
+document.getElementById('rezult9').onclick = function(a) {
 
-function masLength (a) {
-		if (a.length>0) {
-			console.log(a.length);
-		}	
-		else if (a!=Array.isArray()) {
-			console.log('Error');
-		}
+var mas = document.getElementById('mas').value;
+	a = mas.split(',');
+	if (a[0]!=='') 
+		rez9.innerHTML+= a.length;
+	else if (a[0]==='') 
+		rez9.innerHTML+= 'Ошибка! Вы ввели массив в неверном формате.';		
 }
-masLength(mas);
+
 
 // Задача 10. Пользователь вводит числа. Если число больше 10, 
 // то функция возвращает квадрат числа, если меньше 7 – пишет,
@@ -122,13 +126,13 @@ masLength(mas);
 
 document.getElementById('compare').onclick = function() {
 	var inpnum = document.getElementById('inpnum').value;
-	console.log(define(inpnum));
+	document.getElementById('rez10').innerHTML+= define(inpnum);
 }
 
  function define(x) {
    if (x>10) return x*x;      
    else if (x<7) return 'число меньше 7';
-   else if (x==8 || x==9) return x-1
+   else if (x==='8' || x==='9') return x-1
    else return x;
 }
 
@@ -148,6 +152,8 @@ function guess() {
 
 var myNum = document.getElementById('randNum').value;
 
+myNum=myNum*1;
+
 p--;
 
 if (p>0) {
@@ -157,7 +163,7 @@ if (p>0) {
 	else if (rand>myNum) {
 		alert('Ваше число меньше! У вас осталось '+ p +' попыток');
 	}
-	else if (rand==myNum) {
+	else if (rand===myNum) {
 		alert('Вы угадали! Задуманное число: '+ rand);
 		location.reload();
 	}
