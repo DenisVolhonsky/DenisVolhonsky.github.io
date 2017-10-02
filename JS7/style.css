@@ -1,0 +1,12 @@
+body {
+	font-family: sans-serif;
+}
+
+#form1 {
+	width: 500px;
+	background: #E7E7E7;
+	/*margin: 0 auto;*/
+}
+input {
+	margin-bottom: 5px;
+}
