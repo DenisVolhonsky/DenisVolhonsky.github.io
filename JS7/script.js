@@ -5,19 +5,34 @@
 // в расположенный на странице textarea. 
 // Внимание: Количество input на странице не больше.
 // Удалять можно все элементы input кроме последнего.
-document.fields.add_field.onclick = function(e) {	
-	console.log(count);
-	var p = document.createElement('p');
-  	p.innerHTML = '<input type="text"><button type="button" class="minus"> - </button>';
-  	new_field.appendChild(p);
-}
+	
+function repeat() {
+    document.form_1.add_field.onclick = function() {
+    	var div = document.getElementById('new_field');
+    	div.innerHTML += '<div id="deldiv"><br><input type="text" id="b"><button type="button" name="del_field" id="del_field"> - </button></div>';
+        div.innerHTML +='<button type="button" id="collect" name="collect">Собрать!</button>';
+        div.innerHTML +='<textarea id="sum_str" cols="22" rows="3"></textarea>';
+        document.getElementById('a').removeAttribute('disabled');
 
-// document.fields.add_field.onclick = function(e) {	
-// 	console.log(count);
-// 	var p = document.createElement('p');
-//   	p.innerHTML = '<input type="text"><button type="button" class="minus"> - </button>';
-//   	new_field.appendChild(p);
-// }
+        document.form_1.del_field.onclick = function() {
+            document.getElementById('deldiv').remove();
+            document.getElementById('collect').remove();
+            document.getElementById('sum_str').remove();
+            document.getElementById('a').setAttribute('disabled','1');
+            document.getElementById('a').value = '';
+            repeat();
+        }
+        document.getElementById('collect').onclick = function() {
+        	var a = document.getElementById('a').value;
+        	var b = document.getElementById('b').value;
+        	var sum = ''.concat(a,b);
+        	document.getElementById('sum_str').innerHTML = sum;
+        }
+    }
+}
+repeat();
+
+
 
 
 //console.log(document.forms[0].elements[2]);

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,23 +8,36 @@
     <link rel="stylesheet" href="style.css">
     <title>JS7 (Forms)</title>
     <style>
-		input {
-			margin: 2px;
-		}
-		.minus {
-			width: 25px;
-			height: 21px;
-			margin-left: 3px;
-		};
+	#collect {
+		display: block;
+		margin-bottom: 5px;
+
+	}
+	#del_field {
+		margin-left: 4px;
+		width: 24px;
+		height: 21px;
+	}
+	form {
+		width: 300px;
+		background: #D6E5F4;
+	}
+	button {
+		border-radius: 3px;
+		border: 2px solid grey;
+	}
+
     </style>
 </head>
 <body>
 
-<form name="fields" >
+<form name="form_1" >
 	<fieldset id="new_field">
 		<legend>Задача №1</legend>
-		<input type="text">
-		<button type="button" name="add_field">+</button>
+		<div id="addiv">
+			<input type="text" id="a" disabled="">
+			<button type="button" name="add_field" id="add">+</button>
+		</div>
 	</fieldset>
 </form>
 
