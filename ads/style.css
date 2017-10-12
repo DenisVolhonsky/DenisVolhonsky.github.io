@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    box-sizing: border-box;
+}
+#block1 {
+    display:block;
+    height: 100px;
+    width: 600px;
+    /*border: 1px solid red;*/
+}
+
+#block2 {
+    width: 100px;
+    height: 400px;
+    float: left;
+    /*border: 1px solid red;*/
+}
+#block3 {
+    width: 400px;
+    height: 400px;
+    float: left;
+    border: 1px solid black;
+    overflow: hidden;
+}
+#block4 {
+    width: 100px;
+    height: 400px;
+    float: left;
+    /*border: 1px solid red;*/
+}
+#block5 {
+    display:block;
+    height: 100px;
+    width: 600px;
+    /*border: 1px solid red;*/
+}
+.clear {
+    clear: both;
+}
+img {
+    position: absolute;
+    top: -302px;
+    bottom: 0;
+    left: 100px;
+    right: 0;
+    transition: 1s;
+    z-index: -1;
+}
