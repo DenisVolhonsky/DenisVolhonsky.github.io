@@ -3,39 +3,55 @@
 // Возле появившегося элемента создайте кнопку «-» при нажатии на которую данный input будет удаляться.
 // Внизу формы расположите кнопку «собрать», по нажатию которой текст из элементов input будет выведен
 // в расположенный на странице textarea. 
-// Внимание: Количество input на странице не больше.
+// Внимание: Количество input на странице не больше 5.
 // Удалять можно все элементы input кроме последнего.
-	
-function repeat() {
-    document.form_1.add_field.onclick = function() {
-    	var div = document.getElementById('new_field');
-    	div.innerHTML += '<div id="deldiv"><br><input type="text" id="b"><button type="button" name="del_field" id="del_field"> - </button></div>';
-        div.innerHTML +='<button type="button" id="collect" name="collect">Собрать!</button>';
-        div.innerHTML +='<textarea id="sum_str" cols="22" rows="3"></textarea>';
-        document.getElementById('a').removeAttribute('disabled');
 
-        document.form_1.del_field.onclick = function() {
-            document.getElementById('deldiv').remove();
-            document.getElementById('collect').remove();
-            document.getElementById('sum_str').remove();
-            document.getElementById('a').setAttribute('disabled','1');
-            document.getElementById('a').value = '';
-            repeat();
+var countFields=0;
+var parent = document.querySelector('.form1');
+
+document.getElementById('add').onclick = addField;
+
+function addField () {
+    var newInput = document.createElement('input');
+    var newButton = document.createElement('button');
+
+    //newInput.classList.add('new-field');
+    newButton.classList.add('del');
+    newButton.innerHTML='-';
+
+    parent.appendChild(newInput);
+    parent.appendChild(newButton);
+    countFields++;
+
+    // удалить кнопки
+    document.onclick=function(event){
+        if(event.target.className === 'del' ) {
+            event.target.previousElementSibling.remove();;
+            event.target.remove();
+            countFields--;
         }
-        document.getElementById('collect').onclick = function() {
-        	var a = document.getElementById('a').value;
-        	var b = document.getElementById('b').value;
-        	var sum = ''.concat(a,b);
-        	document.getElementById('sum_str').innerHTML = sum;
+    }
+    //////disable plus///////////
+    if(countFields===4){
+        var collectAll = document.createElement('button');
+        collectAll.innerHTML='Собрать';
+        var btnCollectAll = parent.appendChild(collectAll);
+        this.disabled = true;
+
+        //////texterea///////
+        var inputArr = document.querySelectorAll('input');
+        btnCollectAll.onclick = function() {
+            var newTextArea = document.createElement('textarea');
+            var textArea = parent.appendChild(newTextArea);
+            for(var i=0; i<inputArr.length; i++) {
+                textArea.innerHTML+=inputArr[i].value;
+            }
         }
     }
 }
-repeat();
 
 
 
-
-//console.log(document.forms[0].elements[2]);
 // Задание 2. Модифицируйте задание 1, добавив три input[type=»radio»].
 // В опциях первого укажите «Четные», у второго — «Нечетные», у третьего — «Все».
 // В зависимости от выбранной опции, информация считывается соответственно из четных,
