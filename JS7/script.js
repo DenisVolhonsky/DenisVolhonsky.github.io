@@ -5,52 +5,65 @@
 // в расположенный на странице textarea. 
 // Внимание: Количество input на странице не больше 5.
 // Удалять можно все элементы input кроме последнего.
+var countFields = 0;
 
-var countFields=0;
-var parent = document.querySelector('.form1');
+document.onclick = function(event) {
+    var parent = document.querySelector('.form1');
+    var inputArr = document.querySelectorAll('.form1 input');
+    var textArea = document.getElementById('output');
+    var radioBtn = document.getElementsByName('option');
+    var first = document.getElementById('first').value;
 
-document.getElementById('add').onclick = addField;
-
-function addField () {
-    var newInput = document.createElement('input');
-    var newButton = document.createElement('button');
-
-    //newInput.classList.add('new-field');
-    newButton.classList.add('del');
-    newButton.innerHTML='-';
-
-    parent.appendChild(newInput);
-    parent.appendChild(newButton);
-    countFields++;
-
-    // удалить кнопки
-    document.onclick=function(event){
-        if(event.target.className === 'del' ) {
-            event.target.previousElementSibling.remove();;
-            event.target.remove();
-            countFields--;
-        }
+    if(event.target.id==='add') {
+        var newInput = document.createElement('input');
+        newInput.setAttribute('type', 'text');
+        var newButton = document.createElement('button');
+        newButton.classList.add('del');
+        newButton.innerHTML = '-';
+        parent.appendChild(newInput);
+        parent.appendChild(newButton);
+        countFields++;
     }
-    //////disable plus///////////
-    if(countFields===4){
-        var collectAll = document.createElement('button');
-        collectAll.innerHTML='Собрать';
-        var btnCollectAll = parent.appendChild(collectAll);
-        this.disabled = true;
+    if (event.target.className === 'del') {
+        event.target.previousElementSibling.remove();
+        event.target.remove();
+        countFields--;
+    }
+    if (event.target.id === 'collect') {
+        for (var i = 0; i < inputArr.length; i++) {
+            if(radioBtn[0].checked){
+                if(i%2 == 1) textArea.innerHTML += inputArr[i].value;
+            }
+            if(radioBtn[1].checked) {
+                if(i%2 == 0) textArea.innerHTML += inputArr[i].value;
+            }
+            if(radioBtn[2].checked) textArea.innerHTML += inputArr[i].value;
+            //////пустые поля//////
+            if(inputArr[i].value== '') {
+                inputArr[i].style.backgroundColor='#ffc8b2';
+                var sp1 = document.createElement("span");
+                var empty = parent.insertBefore(sp1, inputArr[i]);
+                empty.innerHTML='Заполните поле!';
+            }
+            else {
+                inputArr[i].style.backgroundColor='white';
+                //console.log(typeof empty);
+                //empty.remove();
 
-        //////texterea///////
-        var inputArr = document.querySelectorAll('input');
-        btnCollectAll.onclick = function() {
-            var newTextArea = document.createElement('textarea');
-            var textArea = parent.appendChild(newTextArea);
-            for(var i=0; i<inputArr.length; i++) {
-                textArea.innerHTML+=inputArr[i].value;
             }
         }
     }
+    if (event.target.id === 'erase') {
+        textArea.innerHTML = '';
+    }
+    if (countFields >= 4) {
+        document.getElementById('add').disabled = true;
+    }
+    else if(countFields < 4 && countFields!=0) {
+        document.getElementById('add').disabled = false;
+    }
+   // console.log(countFields);
 }
-
-
 
 // Задание 2. Модифицируйте задание 1, добавив три input[type=»radio»].
 // В опциях первого укажите «Четные», у второго — «Нечетные», у третьего — «Все».

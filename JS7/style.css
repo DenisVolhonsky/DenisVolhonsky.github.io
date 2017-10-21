@@ -1,12 +1,31 @@
-body {
-	font-family: sans-serif;
+* {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 5px;
 }
+fieldset {
+    margin: 30px 0 0 30px;
+    width: 300px;
+    box-shadow: 10px 11px 18px 0px grey;
 
-#form1 {
-	width: 500px;
-	background: #E7E7E7;
-	/*margin: 0 auto;*/
 }
-input {
-	margin-bottom: 5px;
+#add {
+    width: 35px;
+    border: 2px solid red;
+    border-radius: 5px;
+    background: #ffc8b2;
+}
+.del {
+    border: 2px solid blue;
+    width: 35px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background: #afe2ed;
+}
+label {
+    font-size: 16px;
+}
+.form1 span {
+    font-size: 14px;
+    color: red;
 }
