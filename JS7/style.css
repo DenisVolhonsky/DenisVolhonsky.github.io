@@ -32,3 +32,9 @@ label {
 .error:after {
     content: 'xxx';
 }
+#popup {
+    margin: 30px;
+    padding: 10px;
+    box-shadow: 10px 11px 18px 0px grey;
+
+}

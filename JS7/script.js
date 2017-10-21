@@ -90,7 +90,37 @@ document.onclick = function(event) {
 // а на странице выводится надпись «Вы выбрали опцию …» и номер выбранной опции.
 
 
+document.getElementById('popup').onclick = popUp;
 
+function popUp() {
+    newWin = window.open("about:blank", "pop-up", "top=0,left=-1500,height=100, width=220");
+    var option1 = document.createElement('button');
+    var option2 = document.createElement('button');
+    var message = document.createElement('p');
+    option1.innerHTML = 'Опция 1';
+    option2.innerHTML = 'Опция 2';
+    option1.classList.add('btnclose1');
+    option2.classList.add('btnclose2');
+    newWin.document.body.appendChild(option1);
+    newWin.document.body.appendChild(option2);
+    option1.style.margin = '10px';
+    option2.style.margin = '10px';
+    newWin.document.body.style.background = 'gold';
+
+    newWin.document.onclick = function (event) {
+        event = event || window.event;
+        if (event.target.className == 'btnclose1') {
+            newWin.close();
+            message.innerHTML = 'Вы выбрали опцию 1';
+            document.getElementById('task4').appendChild(message);
+        }
+        else if (event.target.className == 'btnclose2') {
+            newWin.close();
+            message.innerHTML = 'Вы выбрали опцию 2';
+            document.getElementById('task4').appendChild(message);
+        }
+    }
+}
 
 
 // Задание 5. Дан список из элементов. Реализуйте скрипт,
