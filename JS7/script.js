@@ -87,16 +87,20 @@ document.onclick = function(event) {
 // При повторном клике, цвет убирается. Добавьте Input, который позволяет добавлять элементы в список.
 // На них также, распостраняется событие click.
 
-        if(event.target.parentElement.id == 'task5') {
+        //// закрашиваем красным///
+        if(event.target.parentElement.id == 'task5' && event.target.className != 'newEl') {
         event.target.classList.toggle('switch');
+        }
+        //// добавляем новый елемент///
+        if(event.target.id == 'addElem') {
+            // var document.get
+            var inpElem = document.getElementById('inpElem').value;
+            var newinpElem = document.createElement(inpElem);
+            var outElem = event.target.parentElement.appendChild(newinpElem);
+            outElem.innerHTML='Элемент';
+            console.log(newinpElem);
 
         }
-
-
-
-
-
-
 
 }
 
@@ -134,8 +138,6 @@ function popUp() {
         }
     }
 }
-
-
 
 
 // Задание 6. Дан блок с изображением. При наведении мыши,
