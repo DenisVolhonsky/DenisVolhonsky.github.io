@@ -93,15 +93,11 @@ document.onclick = function(event) {
         }
         //// добавляем новый елемент///
         if(event.target.id == 'addElem') {
-            // var document.get
             var inpElem = document.getElementById('inpElem').value;
             var newinpElem = document.createElement(inpElem);
             var outElem = event.target.parentElement.appendChild(newinpElem);
             outElem.innerHTML='Элемент';
-            console.log(newinpElem);
-
         }
-
 }
 
 // Задание 4. Реализуйте по нажатию на кнопке всплывающее окно с двумя кнопками.
@@ -139,11 +135,23 @@ function popUp() {
     }
 }
 
-
 // Задание 6. Дан блок с изображением. При наведении мыши,
 // на блок, открывается текстовый блок с черным фоном, прозрачность фона ..
 // Направление раскрытия — с правой части родителя. 
 // Если мышь убрана — то блок закрывается с задержкой по времени.
+var textblock = document.querySelector('#text-block');
+
+document.querySelector('.img').onmouseenter = function () {
+    textblock.style.transition = 1 +'s';
+    textblock.style.left = 0 +'px';
+}
+
+document.querySelector('.img').onmouseleave = function () {
+    setTimeout(function(){
+        textblock.style.transition = 1 +'s';
+        textblock.style.left = 280 +'px';
+    }, 1000);
+}
 
 // Задание 7. Реализуйте скрипт, который при наведении мыши на
 // элементы (изображение или гиперссылка), будет внизу страницы показывать блок,

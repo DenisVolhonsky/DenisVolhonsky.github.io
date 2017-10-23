@@ -41,3 +41,30 @@ label {
 .switch {
     background: red;
 }
+.img {
+    margin: 0 0 30px 30px;
+    height: 300px;
+    width: 280px;
+    overflow: hidden;
+    position: relative;
+}
+#minyon {
+    height: 300px;
+    width: 280px;
+}
+#text-block {
+    height: 300px;
+    width: 280px;
+    color: white;
+    background: #000;
+    position: absolute;
+    top: 0;
+    left: 280px;
+    opacity: 0.4;
+
+}
+.sp{
+    margin-bottom: 0;
+    margin-left: 30px;
+    margin-top: 30px;
+}
