@@ -81,22 +81,37 @@ document.onclick = function(event) {
         document.getElementById('add').disabled = false;
     }
    // console.log(countFields);
+
+// Задание 5. Дан список из элементов. Реализуйте скрипт,
+// который отслеживает клик на элементе списка и подсвечивает его красным цветом.
+// При повторном клике, цвет убирается. Добавьте Input, который позволяет добавлять элементы в список.
+// На них также, распостраняется событие click.
+
+        if(event.target.parentElement.id == 'task5') {
+        event.target.classList.toggle('switch');
+
+        }
+
+
+
+
+
+
+
 }
-
-
 
 // Задание 4. Реализуйте по нажатию на кнопке всплывающее окно с двумя кнопками.
 // Первая кнопка «Опция ., вторая кнопка «Опция .. По нажатию на кнопку окно закрывается,
 // а на странице выводится надпись «Вы выбрали опцию …» и номер выбранной опции.
 
-
 document.getElementById('popup').onclick = popUp;
+var message = document.createElement('p');
 
 function popUp() {
+    document.getElementById('task4').appendChild(message);  // добавляем p
     newWin = window.open("about:blank", "pop-up", "top=0,left=-1500,height=100, width=220");
     var option1 = document.createElement('button');
     var option2 = document.createElement('button');
-    var message = document.createElement('p');
     option1.innerHTML = 'Опция 1';
     option2.innerHTML = 'Опция 2';
     option1.classList.add('btnclose1');
@@ -112,21 +127,16 @@ function popUp() {
         if (event.target.className == 'btnclose1') {
             newWin.close();
             message.innerHTML = 'Вы выбрали опцию 1';
-            document.getElementById('task4').appendChild(message);
         }
         else if (event.target.className == 'btnclose2') {
             newWin.close();
             message.innerHTML = 'Вы выбрали опцию 2';
-            document.getElementById('task4').appendChild(message);
         }
     }
 }
 
 
-// Задание 5. Дан список из элементов. Реализуйте скрипт,
-// который отслеживает клик на элементе списка и подсвечивает его красным цветом.
-// При повторном клике, цвет убирается. Добавьте Input, который позволяет добавлять элементы в список. 
-// На них также, распостраняется событие click.
+
 
 // Задание 6. Дан блок с изображением. При наведении мыши,
 // на блок, открывается текстовый блок с черным фоном, прозрачность фона ..

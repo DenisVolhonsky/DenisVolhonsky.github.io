@@ -29,12 +29,15 @@ label {
     font-size: 14px;
     color: red;
 }
-.error:after {
-    content: 'xxx';
-}
+/*.error:after {*/
+    /*content: 'abc';*/
+/*}*/
 #popup {
     margin: 30px;
     padding: 10px;
     box-shadow: 10px 11px 18px 0px grey;
 
+}
+.switch {
+    background: red;
 }
