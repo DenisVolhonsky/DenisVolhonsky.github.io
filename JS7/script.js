@@ -157,6 +157,8 @@ document.querySelector('.img').onmouseleave = function () {
 // в котором указан адрес изображения, и атрибут alt, если это изображение
 // и адрес ссылки и атрибут title и target, если это гиперссылка.
 // При отсуствии атрибутов — выводится красным предупреждение.
+// Задание 8. Модифицируйте скрипт из задачи 7 таким образом,
+// чтобы те изображения, которые не имеют атрибут alt, подсвечивались красным цветом.
 
 document.onmouseover = function(event) {
     event=event||window.event;
@@ -187,11 +189,36 @@ document.onmouseover = function(event) {
     }
 }
 
-// Задание 8. Модифицируйте скрипт из задачи 7 таким образом,
-// чтобы те изображения, которые не имеют атрибут alt, подсвечивались красным цветом.
-
 // Задание 9. Создайте скрипт для проверки наличия на странице элементов h1-h6
 // выводя при этом их количество. Если какого-либо заголовка нет — вывести предупреждение.
+var countH1 = document.getElementsByTagName('h1').length;
+var countH2 = document.getElementsByTagName('h2').length;
+var countH3 = document.getElementsByTagName('h3').length;
+var countH4 = document.getElementsByTagName('h4').length;
+var countH5 = document.getElementsByTagName('h5').length;
+var countH6 = document.getElementsByTagName('h6').length;
+var sumH = document.querySelector('#sumH');
+
+    document.querySelector('#checkH').onclick = function() {
+        if (countH1 == 0) sumH.innerHTML += '<br>' + 'h1 - такого тега на странице нет!';
+        else sumH.innerHTML += '<br>' + 'h1 - ' + countH1;
+
+        if (countH2 == 0)sumH.innerHTML += '<br>' + 'h2 - такого тега на странице нет!';
+        else sumH.innerHTML += '<br>' + 'h2 - ' + countH2;
+
+        if (countH3 == 0) sumH.innerHTML += '<br>' + 'h3 - такого тега на странице нет!';
+        else sumH.innerHTML += '<br>' + 'h3 - ' + countH3;
+
+        if (countH4 == 0) sumH.innerHTML += '<br>' + 'h4 - такого тега на странице нет!';
+        else sumH.innerHTML += '<br>' + 'h4 - ' + countH4;
+
+        if (countH5 == 0) sumH.innerHTML += '<br>' + 'h5 - такого тега на странице нет!';
+        else sumH.innerHTML += '<br>' + 'h5 - ' + countH5;
+
+        if (countH6 == 0) sumH.innerHTML += '<br>' + 'h6 - такого тега на странице нет!';
+        else sumH.innerHTML += '<br>' + 'h6 - ' + countH6;
+
+    }
 
 // Задание 10.. Модифицируйте скрипт 9 таким образом, чтобы он определял наличие meta title,
 // meta description, meta keywords, рассчитывая длину первых двух.
