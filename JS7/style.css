@@ -5,7 +5,7 @@
 }
 fieldset {
     margin: 30px auto;
-    width: 600px;
+    width: 700px;
     box-shadow: 10px 11px 18px 0px grey;
 
 }
@@ -64,6 +64,7 @@ label {
 }
 .cars {
     margin-bottom: 15px;
+    margin-right: 25px;
 }
 .cars:hover {
     box-shadow: 5px 6px 13px 0px grey;

@@ -167,7 +167,10 @@ document.onmouseover = function(event) {
         var src = event.target.getAttribute('src');
         var alt = event.target.getAttribute('alt');
         info.innerHTML = '<b>Адрес изображения: </b>'+ src +'<br><b>Имя изображения: </b>'+ alt;
-
+        if (!event.target.hasAttribute('alt')) {
+            info.style.background = 'red';
+            info.innerHTML = '<b>Адрес изображения: </b>'+ src +'<br><b>Имя изображения:</b> неизвестно';
+        }
     }
     else if (event.target.className == 'weather'){
         info.classList.add('info');
@@ -180,6 +183,7 @@ document.onmouseover = function(event) {
         //console.log(event.target);
         info.innerHTML = '';
         info.classList.remove('info');
+        info.style.background = 'gold';
     }
 }
 
