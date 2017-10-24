@@ -26,7 +26,7 @@ document.onclick = function(event) {
     var radioBtn = document.getElementsByName('option');
     var first = document.getElementById('first').value;
 
-    if(event.target.id==='add') {
+    if(event.target.id === 'add') {
         var newP = document.createElement('p');
         parent.appendChild(newP);
         var newInput = document.createElement('input');
@@ -152,12 +152,36 @@ document.querySelector('.img').onmouseleave = function () {
         textblock.style.left = 280 +'px';
     }, 1000);
 }
-
 // Задание 7. Реализуйте скрипт, который при наведении мыши на
 // элементы (изображение или гиперссылка), будет внизу страницы показывать блок,
-// в котором указан адрес изображения, и атрибут alt, 
-// если это изображение и адрес ссылки и атрибут title и target, если это гиперссылка.
+// в котором указан адрес изображения, и атрибут alt, если это изображение
+// и адрес ссылки и атрибут title и target, если это гиперссылка.
 // При отсуствии атрибутов — выводится красным предупреждение.
+
+document.onmouseover = function(event) {
+    event=event||window.event;
+    var info = document.getElementById('info');
+
+    if(event.target.className == 'cars') {
+        info.classList.add('info');
+        var src = event.target.getAttribute('src');
+        var alt = event.target.getAttribute('alt');
+        info.innerHTML = '<b>Адрес изображения: </b>'+ src +'<br><b>Имя изображения: </b>'+ alt;
+
+    }
+    else if (event.target.className == 'weather'){
+        info.classList.add('info');
+        var hrefAttr = event.target.getAttribute('href');
+        var titleAttr = event.target.getAttribute('title');
+        var targetAttr = event.target.getAttribute('target');
+        info.innerHTML = '<b>Адрес ссылки: </b>'+ hrefAttr +'<br> <b>Название: </b>'+ titleAttr +'<br> <b>В каком окне: </b>'+ targetAttr;
+    }
+    else {
+        //console.log(event.target);
+        info.innerHTML = '';
+        info.classList.remove('info');
+    }
+}
 
 // Задание 8. Модифицируйте скрипт из задачи 7 таким образом,
 // чтобы те изображения, которые не имеют атрибут alt, подсвечивались красным цветом.

@@ -9,52 +9,70 @@
     <title>Homework JS7</title>
 </head>
 <body>
-<fieldset>
-    <legend>Задача 1,2,3</legend>
-    <div class="form1">
-        <input type="text" id="first">
-        <button id="add" class="add">+</button>
-    </div>
-    <div class="field">
-        <span><b>Опция выбора:</b></span><br>
-        <input type="radio" name="option" value="even" id="even">
-        <label for="even">четные строки</label><br>
-        <input type="radio" name="option" value="odd" id="odd">
-        <label for="odd">не четные строки</label><br>
-        <input type="radio" name="option" value="all" id="all" checked>
-        <label for="all">все строки</label><br>
-    </div>
-    <div>
-        <button id="collect">Собрать</button>
-        <button id="erase">Очистить</button>
-    </div>
-    <textarea name="main" id="output" cols="30" rows="10"></textarea><br>
-</fieldset>
-<fieldset id="task4">
-    <legend>Задача 4</legend>
-    <button class="task4" id="popup">Всплывающее окно</button>
-</fieldset>
-<fieldset id="task5">
-    <legend class="newEl">Задача 5</legend><br>
-    <p class="newEl">Нажмите левой кнопкой мыши на любой элемент в заданной области!</p><br>
-    <input type="text" id="inpElem" class="newEl">
-    <button id="addElem" class="newEl">Добавить новый элемент</button><br>
-    <span>Элемент2</span><br>
-    <label for="el">Элемент3</label>
-    <input type="radio" name="option" id="el"><br>
-    <label for="el1">Элемент4</label>
-    <input type="radio" name="option" id="el1"><br>
-    <a href="#">Элемент5</a><br>
-</fieldset>
+    <fieldset>
+        <legend>Задача 1,2,3</legend>
+        <div class="form1">
+            <input type="text" id="first">
+            <button id="add" class="add">+</button>
+        </div>
+        <div class="field">
+            <span><b>Опция выбора:</b></span><br>
+            <input type="radio" name="option" value="even" id="even">
+            <label for="even">четные строки</label><br>
+            <input type="radio" name="option" value="odd" id="odd">
+            <label for="odd">не четные строки</label><br>
+            <input type="radio" name="option" value="all" id="all" checked>
+            <label for="all">все строки</label><br>
+        </div>
+        <div>
+            <button id="collect">Собрать</button>
+            <button id="erase">Очистить</button>
+        </div>
+        <textarea name="main" id="output" cols="30" rows="10"></textarea><br>
+    </fieldset>
+    <fieldset id="task4">
+        <legend>Задача 4</legend>
+        <button class="task4" id="popup">Всплывающее окно</button>
+    </fieldset>
+    <fieldset id="task5">
+        <legend class="newEl">Задача 5</legend>
+        <br>
+        <p class="newEl">Нажмите левой кнопкой мыши на любой элемент в заданной области!</p><br>
+        <input type="text" id="inpElem" class="newEl">
+        <button id="addElem" class="newEl">Добавить новый элемент</button>
+        <br>
+        <span>Элемент2</span><br>
+        <label for="el">Элемент3</label>
+        <input type="radio" name="option" id="el"><br>
+        <label for="el1">Элемент4</label>
+        <input type="radio" name="option" id="el1"><br>
+        <a href="#">Элемент5</a><br>
+    </fieldset>
 
-<p class="sp">Задача 6</p>
-<div class="img">
-    <img src="large.jpg" alt="img" id="minyon">
-    <p id="text-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. um dolor sictetur adng elit. um dolor sictetur adipisicing elit. um dolor st amet, consectetur adipisicing eAut dolorem nostrum optio quis vitae. Asperiores assumenda, at consectetur consequatur consequuntur eius enim illum quae reiciendis, saepe, sint voluptas. Facere, saepe?</p>
-</div>
+    <fieldset>
+        <legend>Задача 6</legend>
+        <div class="img">
+            <img src="img/large.jpg" alt="img" id="minyon">
+            <p id="text-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. um dolor sictetur adng elit. um
+                dolor sictetur adipisicing elit. um dolor st amet, consectetur adipisicing eAut dolorem nostrum optio quis
+                vitae. Asperiores assumenda, at consectetur consequatur consequuntur eius enim illum quae reiciendis, saepe,
+                sint voluptas. Facere, saepe?</p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Задача 7</legend>
+        <img src="img/blue_car.png" alt="blue_car" class="cars">
+        <img src="img/green_car.png" alt="green_car" class="cars">
+        <img src="img/red_car.png" alt="red_car" class="cars">
+        <img src="img/yellow_car.png" alt="yellow_car" class="cars">
+        <a href="https://sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%BA%D0%B8%D0%B5%D0%B2" target="_blank" title="Sinoptik" class="weather">Погода на Sinoptik class</a>
+        <a href="https://www.gismeteo.ua/weather-kyiv-4944/3-5-days/" target="_self" title="Gismeteo" class="weather">Погода на Gismeteo</a>
+        <a href="http://rp5.ua/%D0%9F%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0_%D0%B2_%D0%9A%D0%B8%D0%B5%D0%B2%D0%B5,_%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0"
+           target="_self" title="Rp_5" class="weather">Погода на Rp_5</a>
+    </fieldset>
 
-
-
+    <div><p id="info"></p></div>
+    <div class="footer"><p>Designed by Denis</p></div>
 <script src="script.js"></script>
 </body>
 </html>

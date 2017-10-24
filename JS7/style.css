@@ -4,7 +4,7 @@
     margin: 5px;
 }
 fieldset {
-    margin: 30px 0 0 30px;
+    margin: 30px auto;
     width: 600px;
     box-shadow: 10px 11px 18px 0px grey;
 
@@ -61,10 +61,32 @@ label {
     top: 0;
     left: 280px;
     opacity: 0.4;
+}
+.cars {
+    margin-bottom: 15px;
+}
+.cars:hover {
+    box-shadow: 5px 6px 13px 0px grey;
+}
+a {
+    margin-right: 20px;
+}
+.info {
+    display: block;
+    padding: 20px;
+    font-size: 16px;
+    background: gold;
+    border: 1px solid black;
+    width: 800px;
+    position: absolute;
+    right: 100px;
+    overflow-wrap: break-word;
 
 }
-.sp{
-    margin-bottom: 0;
-    margin-left: 30px;
-    margin-top: 30px;
+.footer {
+    margin: 0;
+    padding: 30px;
+    height: 50px;
+    background: lightgrey;
+    text-align: center;
 }
