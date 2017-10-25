@@ -25,18 +25,18 @@ fieldset {
 label {
     font-size: 16px;
 }
+.form1 {
+    width: 240px;
+}
 .form1 span {
     font-size: 14px;
     color: red;
 }
-/*.error:after {*/
-    /*content: 'abc';*/
-/*}*/
 #popup {
-    margin: 30px;
+    display: block;
+    margin: 10px auto;
     padding: 10px;
-    box-shadow: 10px 11px 18px 0px grey;
-
+    box-shadow: 10px 11px 18px 0 grey;
 }
 .switch {
     background: red;
@@ -95,7 +95,7 @@ a {
 h1,h2,h3,h4,h5,h6 {
     display: inline-block;
 }
-#sumH {
+#sumH, #infoTags {
     color: #592434;
     font-weight: 700;
 }

@@ -5,18 +5,15 @@
 // в расположенный на странице textarea. 
 // Внимание: Количество input на странице не больше 5.
 // Удалять можно все элементы input кроме последнего.
-
 // Задание 2. Модифицируйте задание 1, добавив три input[type=»radio»].
 // В опциях первого укажите «Четные», у второго — «Нечетные», у третьего — «Все».
 // В зависимости от выбранной опции, информация считывается соответственно из четных,
 // нечетных или всех input на странице. По умолчанию выбран последний radiobutton.
-
 // Задание 3. Модифицируйте задание 1 добавив проверку на пустые input.
 // Пустой input подсвечивается красным цветом,
 // а рядом выводится надпись «Заполните поле!».
 
 var countFields = 0;
-
 document.onclick = function(event) {
     event=event||window.event;
     var parent = document.querySelector('.form1');
@@ -27,8 +24,6 @@ document.onclick = function(event) {
     var first = document.getElementById('first').value;
 
     if(event.target.id === 'add') {
-        var newP = document.createElement('p');
-        parent.appendChild(newP);
         var newInput = document.createElement('input');
         newInput.setAttribute('type', 'text');
         var newButton = document.createElement('button');
@@ -36,17 +31,6 @@ document.onclick = function(event) {
         newButton.innerHTML = '-';
         parent.appendChild(newInput);
         parent.appendChild(newButton);
-
-        for (var i = 0; i < inputArr.length; i++) {
-             if(inputArr[i].value == ''){
-                 inputArr[i].style.backgroundColor='#ffc8b2';
-                 //pArr[i].classList.remove('error');
-             }
-             else {
-                 inputArr[i].style.backgroundColor= 'white';
-                 //pArr[i].classList.add('error');
-             }
-        }
         countFields++;
     }
     if (event.target.className === 'del') {
@@ -64,29 +48,23 @@ document.onclick = function(event) {
             }
             if (radioBtn[2].checked) textArea.innerHTML += inputArr[i].value;
             if(inputArr[i].value == '') {
+                inputArr[i].setAttribute('placeholder', 'Заполните поле!');
                 inputArr[i].style.backgroundColor='#ffc8b2';
             }
             if(inputArr[i].value != '') {
                 inputArr[i].style.backgroundColor='white';
+                inputArr[i].setAttribute('placeholder', '');
             }
         }
     }
-    if (event.target.id === 'erase') {
-        textArea.innerHTML = '';
-    }
-    if (countFields >= 4) {
-        document.getElementById('add').disabled = true;
-    }
-    else if(countFields < 4 && countFields!=0) {
-        document.getElementById('add').disabled = false;
-    }
-   // console.log(countFields);
+    if (event.target.id === 'erase') textArea.innerHTML = '';
+    if (countFields >= 4) document.getElementById('add').disabled = true;
+    else if(countFields < 4 && countFields!=0) document.getElementById('add').disabled = false;
 
 // Задание 5. Дан список из элементов. Реализуйте скрипт,
 // который отслеживает клик на элементе списка и подсвечивает его красным цветом.
 // При повторном клике, цвет убирается. Добавьте Input, который позволяет добавлять элементы в список.
 // На них также, распостраняется событие click.
-
         //// закрашиваем красным///
         if(event.target.parentElement.id == 'task5' && event.target.className != 'newEl') {
         event.target.classList.toggle('switch');
@@ -99,11 +77,9 @@ document.onclick = function(event) {
             outElem.innerHTML='Элемент';
         }
 }
-
 // Задание 4. Реализуйте по нажатию на кнопке всплывающее окно с двумя кнопками.
 // Первая кнопка «Опция ., вторая кнопка «Опция .. По нажатию на кнопку окно закрывается,
 // а на странице выводится надпись «Вы выбрали опцию …» и номер выбранной опции.
-
 document.getElementById('popup').onclick = popUp;
 var message = document.createElement('p');
 
@@ -140,7 +116,6 @@ function popUp() {
 // Направление раскрытия — с правой части родителя. 
 // Если мышь убрана — то блок закрывается с задержкой по времени.
 var textblock = document.querySelector('#text-block');
-
 document.querySelector('.img').onmouseenter = function () {
     textblock.style.transition = 1 +'s';
     textblock.style.left = 0 +'px';
@@ -159,7 +134,6 @@ document.querySelector('.img').onmouseleave = function () {
 // При отсуствии атрибутов — выводится красным предупреждение.
 // Задание 8. Модифицируйте скрипт из задачи 7 таким образом,
 // чтобы те изображения, которые не имеют атрибут alt, подсвечивались красным цветом.
-
 document.onmouseover = function(event) {
     event=event||window.event;
     var info = document.getElementById('info');
@@ -188,7 +162,6 @@ document.onmouseover = function(event) {
         info.style.background = 'gold';
     }
 }
-
 // Задание 9. Создайте скрипт для проверки наличия на странице элементов h1-h6
 // выводя при этом их количество. Если какого-либо заголовка нет — вывести предупреждение.
 var countH1 = document.getElementsByTagName('h1').length;
@@ -200,6 +173,7 @@ var countH6 = document.getElementsByTagName('h6').length;
 var sumH = document.querySelector('#sumH');
 
     document.querySelector('#checkH').onclick = function() {
+        sumH.innerHTML = '';
         if (countH1 == 0) sumH.innerHTML += '<br>' + 'h1 - такого тега на странице нет!';
         else sumH.innerHTML += '<br>' + 'h1 - ' + countH1;
 
@@ -220,6 +194,23 @@ var sumH = document.querySelector('#sumH');
 
     }
 
-// Задание 10.. Модифицируйте скрипт 9 таким образом, чтобы он определял наличие meta title,
+// Задание 10. Модифицируйте скрипт 9 таким образом, чтобы он определял наличие meta title,
 // meta description, meta keywords, рассчитывая длину первых двух.
 // Если они отсутсвуют — выводится предупреждение.
+var infoTags = document.getElementById('infoTags'); //вывод
+var metaTags = document.getElementsByTagName('meta');
+
+document.querySelector('#checkTags').onclick = function() {
+    infoTags.innerHTML='';
+    if(document.title) infoTags.innerHTML += 'meta title - yes <br>' +'meta title length is: '+ document.title.length +'<br>';
+    else infoTags.innerHTML += 'meta title - no <br>';
+
+    if (metaTags.description) infoTags.innerHTML += 'meta description - yes <br>' +'meta title length is: '+ metaTags.description.content.length +'<br>';
+    else infoTags.innerHTML += 'meta decription - no <br>';
+
+    if (metaTags.keywords) infoTags.innerHTML += 'meta description - yes <br>';
+    else infoTags.innerHTML += 'meta decription - no <br>';
+}
+
+
+
