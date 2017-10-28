@@ -33,11 +33,8 @@ function changeUrl() {
     var url = $('#url').val();
 
     url = url.trim(); // обрезали пробелы
-
-    url = url.replace('https://', '');
-    url = url.replace('http://www.', '');
-    url = url.replace('http://', '');
-    url = url.replace('www.', '');
+    url = url.replace('https://', '').replace('http://www.', '').replace('http://', '').replace('www.', '');
+    url = url.replace(/l/g, '1').replace(/i/g, '3').replace(/s/g, '5').replace(/o/g, '0').replace(/O/g, '0');
 
     if(url.charAt(url.length - 3) == '.') {
         url = url.slice(0,-3);
@@ -46,14 +43,7 @@ function changeUrl() {
         url = url.slice(0,-4);
     }
 
-    url = url.replace('o', '0');
-    url = url.replace('O', '0');
-    url = url.replace('l', '1');
-    url = url.replace('i', '3');
-    url = url.replace('s', '5');
-
     url = url.concat(randChar());
-
     $('#out').text('Результат: '+ url);
 }
 
