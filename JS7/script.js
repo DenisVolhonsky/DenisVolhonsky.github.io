@@ -70,11 +70,18 @@ document.onclick = function(event) {
         event.target.classList.toggle('switch');
         }
         //// добавляем новый елемент///
+
         if(event.target.id == 'addElem') {
             var inpElem = document.getElementById('inpElem').value;
-            var newinpElem = document.createElement(inpElem);
-            var outElem = event.target.parentElement.appendChild(newinpElem);
-            outElem.innerHTML='Элемент';
+            if(inpElem==='div' || inpElem==='p' || inpElem==='span') {
+                var newinpElem = document.createElement(inpElem);
+                var outElem = event.target.parentElement.appendChild(newinpElem);
+                outElem.innerHTML='Элемент';
+            }
+            else {
+                document.getElementById('error').innerHTML='Введите значение в правильном формате!';
+            }
+
         }
 }
 // Задание 4. Реализуйте по нажатию на кнопке всплывающее окно с двумя кнопками.
