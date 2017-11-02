@@ -1,0 +1,10 @@
+.form {
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 20px;
+    width: 300px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}

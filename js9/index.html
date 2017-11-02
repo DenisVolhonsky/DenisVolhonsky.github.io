@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>AJAX Classwork</h1>
+
+	<div class="form">
+		<button id="task1">Сумма чисел</button><br>
+		<button id="task2">Возраст</button><br>
+	</div>
+	<div class="form">
+		<input type="radio" name="sex" value="man" id="male">
+		<label for="male">Male</label><br>
+		<input type="radio" name="sex" value="woman" id="female">
+		<label for="female">Female</label><br>
+		<input placeholder="Введите свой рост в см" id="height"><br>
+		<button id="task3">Идеальный вес (input)</button>
+	</div>
+
+	<div class="form">
+		<input type="range" id="range" min="0" max="300" step="1">
+		<span id="out"></span><br>
+		<button id="task4">Идеальный вес (range)</button>
+	</div>
+
+	<div class="form">
+		<input placeholder="Введите ФИО" id="fio" value="Denis"><br>
+		<input type="email" placeholder="e-mail" id="email" value="dvolhonsky@gmail.com"><br>
+		<input type="tel" placeholder="phone" id="phone" value="555-55-55"><br>
+		<button id="task5">Идеальный вес (input)</button>
+	</div>
+
+	<div class="form">
+		<p>Выберите товар:</p>
+		<select id="goods">
+			<option value="0"></option>
+			<option value="1">Бананы</option>
+			<option value="2">Помидоры</option>
+		</select>
+		<button id="task6">Подтвердить</button>
+		<div id="outgoods">1</div>
+	</div>
+
+<script src="js/jquery-3.2.1.min.js"></script>	
+<script src="js/script.js"></script>	
+</body>
+</html>
