@@ -4,6 +4,9 @@
     margin: 20px;
     width: 300px;
 }
+.form>* {
+    margin: 5px;
+}
 img {
     display: block;
     margin: 0 auto;

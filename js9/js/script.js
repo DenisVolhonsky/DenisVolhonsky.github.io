@@ -19,7 +19,7 @@ function myTask1() {
             "num2": 9
         },
         function (data) {   //что с этим делать
-            console.log(data);
+            $('#out1').html(data);
         }
     );
 }
@@ -37,7 +37,7 @@ function myTask2() {
             "year": 1984 //что послать
         },
         function (data) {   //что с этим делать
-            console.log(data);
+            $('#out2').html(data);
         }
     );
 }
@@ -56,7 +56,7 @@ function myTask3() {
             "height": $('#height').val()
         },
         function (data) {   //что с этим делать
-            console.log('Задача 3'+ data);
+            $('#out3').html(data);
         }
     );
 }
@@ -71,7 +71,7 @@ function myTask4() {
             "height": $('#range').val()
         },
         function (data) {   //что с этим делать
-            console.log('(Задача 4)'+ data);
+            $('#out4').html(data);
         }
     );
 }
