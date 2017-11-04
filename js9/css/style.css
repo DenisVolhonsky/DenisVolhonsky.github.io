@@ -3,6 +3,8 @@
     padding: 10px;
     margin: 20px;
     width: 300px;
+    background: lightgrey;
+    box-shadow: 9px 10px 20px 0px #90bfbf;
 }
 .form>* {
     margin: 5px;
@@ -11,3 +13,4 @@ img {
     display: block;
     margin: 0 auto;
 }
+
