@@ -1,7 +1,7 @@
 $(document).ready(function() {
     getAllPosts();
 });
-
+// файл json находится на сервере
 function getAllPosts() {
     $.post(
         "core/core.php", //относительно index.html()
@@ -14,7 +14,7 @@ function getAllPosts() {
                 out+=`
                     <div class="post-main">
 			            <a href="post.html?id=${key}">${data[key].name}</a>
-			            <img src="images/${data[key].img}" alt="Название">
+			            <img src="${data[key].img}" alt="Название">
 		            </div>
                 `;
             }
@@ -22,3 +22,4 @@ function getAllPosts() {
         }
     );
 }
+

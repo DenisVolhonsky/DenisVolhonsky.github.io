@@ -11,4 +11,7 @@ switch ($action) {
     case 'getSinglePost':
         getSinglePost();
         break;
+    case 'addSinglePost':
+        addSinglePost();
+        break;
 }

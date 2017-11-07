@@ -39,3 +39,28 @@ function getSinglePost(){
     mysqli_close($conn);
 }
 
+
+function addSinglePost(){
+    if (isset($_POST['name']) AND isset($_POST['img']) AND isset($_POST['description'])){
+        $name = trim($_POST['name']);
+        $img = ($_POST['img']);
+        $description = ($_POST['description']);
+        if ($name!=='' AND $img!='' AND $description!=''){
+            $conn = connectToDb();
+            $sql = "INSERT INTO posts (name, img, description) VALUES ('$name', '$img', '$description')";
+            if (mysqli_query($conn, $sql)) {
+                echo "1";
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+            }
+            mysqli_close($conn);
+
+        }
+        else {
+            echo 2;
+        }
+    }
+    else {
+        echo 0;
+    }
+}
