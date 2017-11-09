@@ -1,29 +1,28 @@
-$(document).ready(function() {
-    getSinglePost();
+$(document).ready(function(){
+	getSinglePost();
 });
 
-function getSinglePost() {
-    $.post(
-        "core/core.php", //относительно index.html()
-        {
-            "action": "getSinglePost",
-            "id": getParameterByName('id')
-        },
-        function (data) {
-            data = JSON.parse(data); //преобразовали строку в массив
-            console.log(data);
-            var out = '';
-            out+=`        
-                <div class="post-single">
-                <a href="post.html?id=${data.id}">${data.name}</a>
-                <img src="${data.img}" alt="Название">
-                <div class="description">${data.description}</div>
-                </div>`;
-            $('main').html(out);
-        }
-    );
+function getSinglePost(){
+	$.post(
+		"core/core.php",
+		{
+			"action" : "getSinglePost", 
+			"id": getParameterByName('id')
+		},
+		function (data){
+			data = JSON.parse(data);
+			console.log(data);
+			var out='';
+			out+=`
+				<div class="post-single">
+				<a href="post.html?id=${data.id}"><h1>${data.name}</h1></a>
+				<img src="${data.img}" alt="Название">
+				<div class="description">${data.description}</div>
+				</div>`;
+			$('main').html(out);
+		}
+	);
 }
-//функция How can I get query string values in JavaScript? берет адр строку и отбрасывая все лишнее оставляя только параметры
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;

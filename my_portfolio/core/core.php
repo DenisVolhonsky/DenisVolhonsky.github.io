@@ -14,4 +14,10 @@ switch ($action) {
     case 'addSinglePost':
         addSinglePost();
         break;
+    case 'changePost':
+        changePost();
+        break;
+    case 'updatePost':
+        updatePost();
+        break;
 }
