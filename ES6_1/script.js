@@ -37,5 +37,4 @@ const STRING =
      MIDDLELENGTH = ${MIDDLELENGTH}
      LOWLENGTH = ${LOWLENGTH}
      `;
-
 console.log(STRING);
