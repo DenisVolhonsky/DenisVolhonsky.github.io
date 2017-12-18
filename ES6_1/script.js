@@ -26,6 +26,16 @@ let rightBracketPos = UPPER.indexOf(']');
 console.log(`Символ "[" по счету ${leftBracketPos}-й`);
 console.log(`Символ "]" по счету ${rightBracketPos}-й`);
 
-//  Используя многострочную шаблонную строку, вывести названия всех переменных и полученные значения
+//  5. Используя многострочную шаблонную строку, вывести названия всех переменных и полученные значения
 //  за один console.log.
+const STRING =
+    `
+     UPPER = ${UPPER}
+     MIDDLE = ${MIDDLE}
+     LOW = ${LOW}
+     UPPERLENGTH = ${UPPERLENGTH}
+     MIDDLELENGTH = ${MIDDLELENGTH}
+     LOWLENGTH = ${LOWLENGTH}
+     `;
 
+console.log(STRING);
