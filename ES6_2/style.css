@@ -1,6 +1,11 @@
 .block1 {
-  border: solid;
+  margin: 50px;
   width: 500px;
-  font-size: 30px;
-  background: #c2f73f;
-  color: #d08c97; }
+  font-size: 50px; }
+
+#enter {
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100px;
+  height: 50px; }

@@ -1,7 +1,14 @@
 .block1 {
-    border: solid;
-    width: 500px;
-    font-size: 30px;
-    background: rgb(random(255),random(255),random(255));
-    color: rgb(random(255),random(255),random(255));
+     margin: 50px;
+     width: 500px;
+     font-size: 50px;
+ }
+#enter {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100px;
+    height: 50px;
+    //font-size: 25px;
+
 }
