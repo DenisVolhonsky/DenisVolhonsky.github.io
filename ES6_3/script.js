@@ -32,3 +32,14 @@ let trainer = arr[0][4]+arr[0][3]+arr[1][0]+arr[0][7]+arr[2][5]+arr[0][2]+arr[0]
 console.log(hello);
 console.log(javascript);
 console.log(trainer);
+
+//////finding index in the Array
+let findingIndex=(char)=> {
+    for(let i=0; i<arr.length; i++){
+        for(let j=0; j<arr[i].length; j++){
+            if(arr[i][j] === char)
+                console.log(`${char} = arr[${i}][${j}]`);
+        }
+    }
+};
+findingIndex('l');
