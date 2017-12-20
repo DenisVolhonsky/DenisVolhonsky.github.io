@@ -6,20 +6,19 @@
 //
 // const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
 
-
 const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
 
-const arr = alphabet.split("");
-const upperRow = arr.slice(0,12);
-const middleRow = arr.slice(12,23);
-const lowRow = arr.slice(23,34);
+const symbolArr = alphabet.split("");
+const upperRow = symbolArr.slice(0,12);
+const middleRow = symbolArr.slice(12,23);
+const lowRow = symbolArr.slice(23,34);
 
-const keyboardArr = [];
-keyboardArr[0]=upperRow;
-keyboardArr[1]=middleRow;
-keyboardArr[2]=lowRow;
+const arr = [];
+arr[0]=upperRow;
+arr[1]=middleRow;
+arr[2]=lowRow;
 
-console.log(keyboardArr);
+console.log(arr);
 
 // Используя готовый массив клавиатурных строк, обращаясь к элементам массива по индексам,
 // записать в переменные слова и вывести их в консоль:
@@ -27,18 +26,9 @@ console.log(keyboardArr);
 // javascript
 // trainer
 
-// let h=keyboardArr[1].indexOf('h');
-//console.log(h);
-
-let findingChar=()=> {
-    for(let i=0; i<keyboardArr.length; i++){
-        // console.log(keyboardArr[i]);
-        for(let j=0; j<keyboardArr[i].length; j++){
-            // console.log(keyboardArr[i][j]);
-            if(keyboardArr[i][j]==='h')
-            console.log(i,j);
-        }
-    }
-};
-
-findingChar();
+let hello = arr[1][5]+arr[0][2]+arr[1][8]+arr[1][8]+arr[0][8];
+let javascript = arr[1][6]+arr[1][0]+arr[2][3]+arr[1][0]+arr[1][1]+arr[2][2]+arr[0][3]+arr[0][7]+arr[0][9]+arr[0][4];
+let trainer = arr[0][4]+arr[0][3]+arr[1][0]+arr[0][7]+arr[2][5]+arr[0][2]+arr[0][3];
+console.log(hello);
+console.log(javascript);
+console.log(trainer);
