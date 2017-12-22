@@ -10,9 +10,32 @@ let addKeyboardLayout = alphabet => {
     arr[1] = symbolArr.slice(12,23);
     arr[2] = symbolArr.slice(23,34);
 
-    console.log(arr);
+    // console.log(arr);
 
-    getRandCharInRow(1);  // тут зададим ввод строки с клавиатуры
+    document.getElementById('string1').innerHTML=arr[0];
+    document.getElementById('string2').innerHTML=arr[1];
+    document.getElementById('string3').innerHTML=arr[2];
+
+
+    let numberOfStrings = document.getElementById('row').options.length;
+    let valueOfString = document.getElementById('row').options;
+
+
+
+
+    document.getElementById('rand-char-string').onclick= function() {
+
+        for(let i=0; i<numberOfStrings; i++) {
+            if(valueOfString[i].selected)
+            getRandCharInRow(valueOfString[i].value)
+        }
+
+
+
+    }
+
+
+    // document.getElementById('rand-char-string').onclick= getRandCharInRow(stringNumber);
     
 };
 addKeyboardLayout(alphabet);
@@ -21,7 +44,8 @@ addKeyboardLayout(alphabet);
 // и возвращает случайную букву из этой строки.
 function getRandCharInRow(row)  {
     console.log(arr[row]);
-    console.log(arr[row][getRandomInt(0, arr[row].length)]);
+    console.log(arr[row][getRandomInt(0, arr[row].length)]); // рандомный символ
+    document.getElementById('string-char').innerHTML = `${arr[row][getRandomInt(0, arr[row].length)]}`;
 }
 
 function getRandomInt(min, max) {   // рандом целых чисел
@@ -29,10 +53,20 @@ function getRandomInt(min, max) {   // рандом целых чисел
 }
 
 //Создать функцию getRandCharInAlph() которая возвращает случайную букву из всего алфавита.
-function getRandCharInAlph() {
-    console.log(symbolArr);
-    console.log(symbolArr[getRandomInt(0, symbolArr.length)]);
-}
+document.getElementById('rand-char-keyb').onclick= getRandCharInAlph;
 
-getRandCharInAlph();
+    function getRandCharInAlph() {
+        console.log(symbolArr);
+        console.log(symbolArr[getRandomInt(0, symbolArr.length)]);
+        document.getElementById('keyboard-char').innerHTML=`${symbolArr[getRandomInt(0, symbolArr.length)]}`;
+    }
+
+
+
+
+
+
+
+
+
 
