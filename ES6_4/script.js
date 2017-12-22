@@ -21,10 +21,11 @@ let addKeyboardLayout = alphabet => {
     let options = document.getElementById('row').options;
 
     document.getElementById('rand-char-string').onclick=()=>{
-        for(let i=0; i<options.length; i++) {
+
+        Array.from(options).map(function(n,i){
             if(options[i].selected)
-            getRandCharInRow(options[i].value);
-        }
+                return getRandCharInRow(options[i].value);
+        });
     }
     return console.log(alphabet);
 };
