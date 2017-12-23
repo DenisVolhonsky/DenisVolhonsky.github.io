@@ -21,7 +21,6 @@ let addKeyboardLayout = alphabet => {
     let options = document.getElementById('row').options;
 
     document.getElementById('rand-char-string').onclick=()=>{
-
         Array.from(options).map(function(n,i){
             if(options[i].selected)
                 return getRandCharInRow(options[i].value);
