@@ -78,9 +78,16 @@ let addKeyboardLayout = alphabet => {
 };
 /////////////////////////////////////////////////////////////////////
 
+let collection = () => {
+    addKeyboardLayout('en');
+    addKeyboardLayout('ru');
+    addKeyboardLayout('ua');
+};
+
+/////////////////////////////////////////////////////////////////////
+
 let getRandCharInAlph=()=> {
     document.getElementById('keyboard-char').innerHTML=`${keybLang[getRandomInt(0, keybLang.length)]}`;
-    console.log(keybLang);
 }
 
 document.getElementById('rand-char-keyb').onclick= getRandCharInAlph;
@@ -89,27 +96,30 @@ document.getElementById('rand-char-keyb').onclick= getRandCharInAlph;
 let flag=0;
 
 while (flag!==null) {
-    i = prompt('Выберите язык');
+    i = prompt('Выберите язык который вы хотите использовать на тренажере: en-0, ru-1, ua-2.');
     if (i==0) {
         keyboard.currentLang=keyboard.langs[i];
+        collection();
         addKeyboardLayout(keyboard.currentLang);
-        console.log(keyboard.currentLang);
+        console.log(keyboard);
         flag = null;
     }
     else if (i==1) {
         keyboard.currentLang=keyboard.langs[i];
+        collection();
         addKeyboardLayout(keyboard.currentLang);
-        console.log(keyboard.currentLang);
+        console.log(keyboard);
         flag = null;
     }
     else if (i==2) {
         keyboard.currentLang=keyboard.langs[i];
+        collection();
         addKeyboardLayout(keyboard.currentLang);
-        console.log(keyboard.currentLang);
+        console.log(keyboard);
         flag = null;
     }
     else if (i!=0 && i!=1 && i!=2 && i!==null) {
-        alert('other');
+        alert('Был выбран не доступный язык. Попробуйте еще раз!');
     }
     else if (i===null) flag = null;
 }
