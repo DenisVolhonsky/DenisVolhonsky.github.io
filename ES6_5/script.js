@@ -76,10 +76,16 @@ let addKeyboardLayout = alphabet => {
         });
      }
 };
+/////////////////////////////////////////////////////////////////////
 
+let getRandCharInAlph=()=> {
+    document.getElementById('keyboard-char').innerHTML=`${keybLang[getRandomInt(0, keybLang.length)]}`;
+    console.log(keybLang);
+}
 
+document.getElementById('rand-char-keyb').onclick= getRandCharInAlph;
 
-
+/////////////////////////////////////////////////////////////////////
 let flag=0;
 
 while (flag!==null) {
