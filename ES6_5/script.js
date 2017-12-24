@@ -49,22 +49,53 @@ const getRandomInt = (min, max) => {   // рандом целых чисел
 }
 
 ///////////////////////////////////////////////////////////
+
+let addKeyboardLayout = alphabet => {
+    let keybLang;
+
+    if(alphabet=== 'en') keybLang = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
+    if(alphabet=== 'ru') keybLang = "йцукенгшщзхъфывапролджэячсмитьбю.";
+    if(alphabet=== 'ua') keybLang = "йцукенгшщзхїфівапролджєячсмитьбю.";
+
+    keyboard.layouts[alphabet].topRow = keybLang.split("").slice(0,12);
+    keyboard.layouts[alphabet].middleRow = keybLang.split("").slice(12,23);
+    keyboard.layouts[alphabet].bottomRow = keybLang.split("").slice(23,34);
+
+    document.getElementById('string1').innerHTML=keyboard.layouts[alphabet].topRow;
+    document.getElementById('string2').innerHTML=keyboard.layouts[alphabet].middleRow;
+    document.getElementById('string3').innerHTML=keyboard.layouts[alphabet].bottomRow;
+
+    let options = document.getElementById('row').options;
+
+    document.getElementById('rand-char-string').onclick=()=>{
+        Array.from(options).map(function(n,i){
+            if(options[i].selected)
+                return getRandCharInRow(options[i].value);
+        });
+    }
+    //return console.log(alphabet);
+};
+
+///////////////////////////////////////////////////////////
 let flag=0;
 
 while (flag!==null) {
     i = prompt('Выберите язык');
     if (i==0) {
-        keyboard.currentLang=i;
+        keyboard.currentLang=keyboard.langs[i];
+        addKeyboardLayout(keyboard.currentLang);
         console.log(keyboard.currentLang);
         flag = null;
     }
     else if (i==1) {
-        keyboard.currentLang=i;
+        keyboard.currentLang=keyboard.langs[i];
+        addKeyboardLayout(keyboard.currentLang);
         console.log(keyboard.currentLang);
         flag = null;
     }
     else if (i==2) {
-        keyboard.currentLang=i;
+        keyboard.currentLang=keyboard.langs[i];
+        addKeyboardLayout(keyboard.currentLang);
         console.log(keyboard.currentLang);
         flag = null;
     }
