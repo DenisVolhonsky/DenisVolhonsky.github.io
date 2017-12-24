@@ -49,9 +49,9 @@ const getRandomInt = (min, max) => {   // рандом целых чисел
 }
 
 ///////////////////////////////////////////////////////////
+let keybLang;
 
 let addKeyboardLayout = alphabet => {
-    let keybLang;
 
     if(alphabet=== 'en') keybLang = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
     if(alphabet=== 'ru') keybLang = "йцукенгшщзхъфывапролджэячсмитьбю.";
@@ -67,16 +67,19 @@ let addKeyboardLayout = alphabet => {
 
     let options = document.getElementById('row').options;
 
-    document.getElementById('rand-char-string').onclick=()=>{
+     document.getElementById('rand-char-string').onclick=()=>{  //выбрали строку
+
         Array.from(options).map(function(n,i){
             if(options[i].selected)
-                return getRandCharInRow(options[i].value);
+            return document.getElementById('string-char').innerHTML =
+                `${keyboard.layouts[alphabet][options[i].value][getRandomInt(0, keyboard.layouts[alphabet][options[i].value].length)]}`;
         });
-    }
-    //return console.log(alphabet);
+     }
 };
 
-///////////////////////////////////////////////////////////
+
+
+
 let flag=0;
 
 while (flag!==null) {
