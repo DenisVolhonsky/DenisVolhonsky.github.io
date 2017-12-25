@@ -1,0 +1,25 @@
+.container {
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+    background: rgba(147, 198, 35, 0.65);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);;
+}
+.strings {
+    margin: 10px;
+}
+.list {
+    margin-bottom: 20px;
+}
+.btn {
+    margin-bottom: 10px;
+}
+.strings>span,
+.output {
+    color: #38549D;
+    font-weight: bold;
+}
+.output {
+    margin-top: 4px;
+}
