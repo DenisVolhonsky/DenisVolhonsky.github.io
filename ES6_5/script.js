@@ -96,7 +96,7 @@ document.getElementById('rand-char-keyb').onclick= getRandCharInAlph;
 let flag=0;
 
 while (flag!==null) {
-    let i = prompt('Выберите язык который вы хотите использовать на тренажере: en-0, ru-1, ua-2.');
+    i = prompt('Выберите язык который вы хотите использовать на тренажере: en-0, ru-1, ua-2.');
     if (i==0) {
         keyboard.currentLang=keyboard.langs[i];
         collection();
