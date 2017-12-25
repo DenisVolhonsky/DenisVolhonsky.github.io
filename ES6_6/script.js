@@ -1,9 +1,7 @@
 let keyTrainer = {
     chars: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o',
         'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'],
-
     charCount: '',
-
     setCharCount: function () {
         let k=0;
         while(k==0) {
@@ -18,7 +16,6 @@ let keyTrainer = {
             }
         }
     },
-
     checkPositiveInteger: function (response) {  //проверяет является ли число целым положительным числом
         if (response>0 && parseInt( response ) == response) flag = true;
         else flag = false; // меньше нуля и не целое
