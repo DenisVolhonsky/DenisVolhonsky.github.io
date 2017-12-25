@@ -8,7 +8,6 @@ let keyTrainer = {
         let k=0;
         while(k==0) {
             let result = prompt(`Введите целое число:`);
-
             if(this.checkPositiveInteger(result)) {
                 this.charCount = result;
                 k=1;
