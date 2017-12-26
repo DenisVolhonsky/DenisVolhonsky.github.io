@@ -30,3 +30,6 @@ h2 {
 .output {
     margin-top: 4px;
 }
+#task, #inputStr {
+    overflow-wrap: break-word;
+}
