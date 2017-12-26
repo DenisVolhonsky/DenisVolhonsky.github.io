@@ -40,6 +40,8 @@ let keyTrainer = {
                k=0;
             }
         }
+        document.getElementById('chars').innerHTML = `Дана строка: <b>[ ${this.chars} ]</b>`;
+        document.getElementById('charCount').innerHTML = `Вы ввели число: <b>${this.charCount}</b>`;
         return result;
     },
     checkPositiveInteger: function (response) {  //проверяет является ли число целым положительным числом
@@ -61,13 +63,16 @@ let keyTrainer = {
     },
 
     starTask: function () {
-        let inputStr = this.userInput = prompt(`Наберите эту строку которая введена в поле input:`, `${this.task}`);
+        let inputStr = this.userInput = prompt(`Наберите строку которая введена в поле input:`, `${this.task}`);
         let randStr = this.task.join(',');
         let maxStr;
 
         if(inputStr !== null) { //отлавливаем ошибки
 
             maxStr = Math.max(inputStr.length, randStr.length);
+            document.getElementById('task').innerHTML = `Случайная строка из ${this.charCount} символов: <b>[ ${this.task} ]</b>`;
+            document.getElementById('inputStr').innerHTML = `Введенная вами строка: <b>[ ${inputStr} ]</b>`;
+
             console.log(`Cлучайная строка: ${randStr}`);  // случайная строка
             console.log(`Введенная строка: ${inputStr}`); // введенная строка
 
@@ -78,8 +83,12 @@ let keyTrainer = {
             }
             if (this.userError == 0) {
                 console.log(`Поздравляю строки совпадают, количество ошибок ${this.userError}!`);
+                document.getElementById('userError').innerHTML = `Поздравляю строки совпадают, количество ошибок <b>${this.userError}</b>!`;
             }
-            else console.log(`Вы допустили: ${this.userError} ошибок(ки).`);
+            else {
+                console.log(`Вы допустили: ${this.userError} ошибок(ки).`);
+                document.getElementById('userError').innerHTML = `Вы допустили: <b>${this.userError}</b> ошибок(ки).`;
+            }
         }
         else inputStr='';
     },
@@ -87,10 +96,11 @@ let keyTrainer = {
     userError: 0
 };
 
-function run() {
+let run = () => {
     keyTrainer.setCharCount();
     keyTrainer.createTask();
     keyTrainer.starTask();
     console.log(keyTrainer);
+    document.getElementById('keyTrainer').innerHTML = `Объект <b>keyTrainer</b> - заполнен!`;
 }
 run();
