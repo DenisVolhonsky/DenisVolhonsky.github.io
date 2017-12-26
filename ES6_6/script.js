@@ -35,13 +35,29 @@ let keyTrainer = {
             randInx = getRandomInt(0, keyTrainer.chars.length);
             this.task.push(this.chars[randInx]);
         }
-    }
+    },
+
+    starTask: function () {
+        this.userInput = prompt(`Наберите эту строку которая введена в поле input:`, `${this.task}`);
+        let strNewArr = this.task.join(',');
+        console.log(this.userInput); // ввеженная строка
+        console.log(strNewArr);  // случайная строка
+
+        if(this.userInput === strNewArr) {
+            console.log('Succes');
+        }
+        else console.log('No');
+
+    },
+    userInput: '',
 };
 
 function run() {
     keyTrainer.setCharCount();
     keyTrainer.createTask();
-    console.log(keyTrainer);
+    keyTrainer.starTask();
+
+    // console.log(keyTrainer);
 }
 run();
 
