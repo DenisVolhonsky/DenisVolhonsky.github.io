@@ -14,7 +14,7 @@
 
 let storageTest = localStorage.setItem('test','localStorage work!!!');
 
-if (localStorage.getItem('test') !==null) {
+if (localStorage.getItem('test') !== null) {
     storageTest = localStorage.getItem('test');
     console.log(storageTest);
 }
@@ -25,3 +25,24 @@ else console.log('localStorage error!!!');
 //     оформления – происходит подключение соответствующего файла CSS. Запишите в localStorage
 //     выбранную тему оформления. При обновлении страницы загружайте ранее выбранную тему.
 
+
+if (localStorage.getItem('theme') !== null) {
+    storageTest = localStorage.getItem('theme');  //загрузить из LS
+    document.getElementsByTagName('link')[0].href = storageTest;
+}
+
+
+document.getElementById('selectTheme').onclick = function () {
+    if (document.getElementsByName('theme')[0].checked) {
+        document.getElementsByTagName('link')[0].href = 'style1.css';
+        localStorage.setItem('theme','style1.css');  //загрузить в LS
+
+    }
+    else if(document.getElementsByName('theme')[1].checked) {
+        document.getElementsByTagName('link')[0].href = 'style2.css';
+        localStorage.setItem('theme','style2.css');  //загрузить в LS
+    }
+}
+
+//     Задание 3. Создайте массив, сохраните его в localStorage. Считайте массив из localStorage,
+//     выведите его на экран.
