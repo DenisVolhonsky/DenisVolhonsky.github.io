@@ -1,3 +1,11 @@
-body {
+.container {
+    margin: 100px auto;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
     background: lime;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);;
+}
+h3 {
+    margin: 10px;
 }
