@@ -46,3 +46,12 @@ document.getElementById('selectTheme').onclick = function () {
 
 //     Задание 3. Создайте массив, сохраните его в localStorage. Считайте массив из localStorage,
 //     выведите его на экран.
+
+let arr = [19,7,2,7,10,3,14,11,9,22];
+
+document.getElementById('array').innerHTML = `Array: ${arr}`;
+localStorage.setItem('array', arr);
+
+
+storageArr = localStorage.getItem('array');  //загрузить из LS
+document.getElementById('array').innerHTML = `Array: ${storageArr}`;
