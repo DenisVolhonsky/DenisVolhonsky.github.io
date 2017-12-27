@@ -20,7 +20,6 @@ if (localStorage.getItem('theme') !== null) {
     document.getElementsByTagName('link')[0].href = storageTest;
 }
 
-
 document.getElementById('selectTheme').onclick = function () {
     if (document.getElementsByName('theme')[0].checked) {
         document.getElementsByTagName('link')[0].href = 'style1.css';
