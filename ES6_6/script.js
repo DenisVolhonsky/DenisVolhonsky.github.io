@@ -104,3 +104,4 @@ let run = () => {
     document.getElementById('keyTrainer').innerHTML = `Объект <b>keyTrainer</b> - заполнен!`;
 }
 run();
+
