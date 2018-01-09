@@ -1,7 +1,8 @@
 #keyboard {
     margin: 50px auto;
-    width: 600px;
-    border: solid;
+    width: 504px;
+    border-radius: 5px;
+    background: #ececec;
 }
 .btn_style {
     margin: 5px;
@@ -13,14 +14,15 @@
     font-size: 16px;
     font-family: sans-serif;
     color: #000;
+    font-weight: 700;
     text-decoration: none;
-    border: solid;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    background: #fff;
+}
 
-
-
-
-
-
-
-
+.btn_style:hover {
+    background: #808080;
+    color: #fff;
+    box-shadow: none;
 }

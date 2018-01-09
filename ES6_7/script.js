@@ -25,6 +25,13 @@ let Keyboard = {
                 let newstr = document.createElement('br');
                 keyboard.appendChild(newstr);
             }
+            if(this.alphabet[i]==='a'){
+                insertbtn[i].style.marginLeft='25px';
+            }
+            if(this.alphabet[i]==='z'){
+                insertbtn[i].style.marginLeft='45px';
+            }
+
         }
     },
 };
