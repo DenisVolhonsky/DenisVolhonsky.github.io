@@ -8,19 +8,25 @@
 
 let Keyboard = {
     alphabet: "qwertyuiop[]asdfghjkl;'zxcvbnm,./",
-    topRow: 12,
-    middleRow: 11,
-    bottomRow: 10,
-    createLayout: function () {
+    topRow: 11,
+    middleRow: 22,
+    bottomRow: 33,
+    createLayout: function() {
         let keyboard = document.getElementById('keyboard');
+        let insertbtn=[];
 
-        for(let i=0; i<this.topRow; i++) {
+        for(let i=0; i<this.bottomRow; i++) {
             let btn = document.createElement('a');
             btn.href='#';
-            keyboard.appendChild(btn);
-            console.log(i);
+            insertbtn[i] = keyboard.appendChild(btn);
+            insertbtn[i].textContent = this.alphabet[i];
+            btn = insertbtn[i].classList.add('btn_style');
+            if(i===this.topRow || i===this.middleRow) {
+                let newstr = document.createElement('br');
+                keyboard.appendChild(newstr);
+            }
         }
-    }
+    },
 };
 
 Keyboard.createLayout();
