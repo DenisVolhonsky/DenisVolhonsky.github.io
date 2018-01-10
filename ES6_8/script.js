@@ -25,4 +25,39 @@ const playSound = note => {
 };
 
 const buttons = Array.from(document.querySelectorAll("button"));
-const keys = "qwertyuiop[]asdfghjkl;'zxcvbnm,./".split("");
+const keys = "qwertyuiop[]asdfghjkl;'zxcvbnm,./ ".split("");
+
+//console.log(buttons);
+//console.log(keys);
+
+
+let callback = (event) => {
+
+    //console.log(event.key); //буква
+
+    for(let i=0; i<buttons.length; i++) {
+
+        if(event.key === keys[i]) {
+             console.log(buttons[i]);  // нажатый элемент
+             buttons[i].classList.add('keyboard__btn--active');
+             setTimeout(() => buttons[i].classList.remove('keyboard__btn--active'),200);
+
+        }
+    }
+
+
+
+}
+
+window.addEventListener("keydown", callback);
+
+
+
+
+
+
+
+
+
+
+
