@@ -32,7 +32,9 @@ let callback = (event) => {
         if(event.key === keys[i]) {
              buttons[i].classList.add('keyboard__btn--active');
              setTimeout(() => buttons[i].classList.remove('keyboard__btn--active'),200);
-             playSound(buttons[i].getAttribute('data-note'));
+             if(document.querySelector('#slideThree').checked){
+                 playSound(buttons[i].getAttribute('data-note'));
+             }
         }
     }
 }
