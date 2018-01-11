@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1590b895-4232-4e26-af17-2b44efde23e4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LoDash template/script.js" afterPath="$PROJECT_DIR$/LoDash template/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ES6_9/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ES6_9/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ES6_9/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ES6_9/style.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ES6_9/style.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ES6_9/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,14 +21,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4585774">
+    <splitter split-orientation="horizontal" split-proportion="0.47871485">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+        <leaf>
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/LoDash template/index.html">
+            <entry file="file://$PROJECT_DIR$/ES6_9/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+                <state relative-caret-position="294">
+                  <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -33,11 +39,13 @@
       <split-second>
         <leaf>
           <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/LoDash template/script.js">
+            <entry file="file://$PROJECT_DIR$/ES6_9/script.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-                  <folding />
+                <state relative-caret-position="441">
+                  <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -74,7 +82,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ES6_7/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ES6_9/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/ES6_5/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/ES6_9/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/JS11/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/LoDash template/script.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/ES6_6/script.js" root0="SKIP_INSPECTION" />
@@ -119,9 +129,9 @@
         <option value="$PROJECT_DIR$/ES6_8/style.scss" />
         <option value="$PROJECT_DIR$/ES6_8/script.js" />
         <option value="$PROJECT_DIR$/ES6_9/style.css" />
+        <option value="$PROJECT_DIR$/LoDash template/script.js" />
         <option value="$PROJECT_DIR$/ES6_9/index.html" />
         <option value="$PROJECT_DIR$/ES6_9/script.js" />
-        <option value="$PROJECT_DIR$/LoDash template/script.js" />
       </list>
     </option>
   </component>
@@ -183,6 +193,26 @@
             <path>
               <item name="DenisVolhonsky.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="DenisVolhonsky.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="ES6_5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DenisVolhonsky.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DenisVolhonsky.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="ES6_7" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DenisVolhonsky.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DenisVolhonsky.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="ES6_8" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DenisVolhonsky.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DenisVolhonsky.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="ES6_9" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DenisVolhonsky.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DenisVolhonsky.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="LoDash template" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -216,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (5)">
+  <component name="RunManager" selected="JavaScript Debug.index.html (4)">
     <configuration name="index.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DenisVolhonsky.github.io/ES6_6/index.html" />
     <configuration name="index.html (2)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DenisVolhonsky.github.io/ES6_7/index.html" />
     <configuration name="index.html (3)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DenisVolhonsky.github.io/ES6_8/index.html" />
@@ -231,9 +261,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (5)" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html (4)" />
-        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html (4)" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html (3)" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html (5)" />
         <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html (2)" />
         <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.index.html (1)" />
       </list>
@@ -272,24 +302,24 @@
       <workItem from="1515601279239" duration="419000" />
       <workItem from="1515601739978" duration="5257000" />
       <workItem from="1515607626230" duration="3032000" />
-      <workItem from="1515654341150" duration="6022000" />
+      <workItem from="1515654341150" duration="20024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="205762000" />
+    <option name="totallyTimeSpent" value="219764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1108631" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07366072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.100328945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23684211" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -332,20 +362,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ES6_5/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ES6_5/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1848">
-          <caret line="88" column="15" lean-forward="false" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ES6_4/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -617,13 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ES6_5/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ES6_7/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -662,14 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ES6_8/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LoDash template/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -680,17 +681,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LoDash template/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        <state relative-caret-position="336">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoDash template/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="252">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ES6_8/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="38" column="15" lean-forward="true" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ES6_5/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="55" column="36" lean-forward="true" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ES6_9/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ES6_9/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

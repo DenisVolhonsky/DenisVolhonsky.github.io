@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slideThree">
+        <input type="checkbox" value="None" id="slideThree" name="check" checked />
+        <label for="slideThree"></label>
+        <span>Sound</span>
+    </div>
+    <div id="keyboard-container"></div>
+
+    <!--template  -->
+    <script type="text/template" id="keyboard-item">
+        <div class="keyboard">
+            <% let k,l; space=false
+                for(let i=0; i<4; i++) {
+                if(i === 0) {k=0; l=12;}
+                else if(i === 1) {k=12; l=23;}
+                else if (i === 2) {k=23; l=33;}
+                else if (i === 3) {space=true; k=33; l=34};
+            %>
+                <div class="keyboard__row">
+                    <% en.split('').slice(k,l).forEach((item,i) => {
+                    if (space) { %>
+                    <button class="keyboard__btn keyboard__btn--space" data-note="do">space</button>
+                    <% } else {%>
+                        <button class="keyboard__btn" data-note="<%- rand() %>"><%- item %></button>
+                    <% } }); %>
+                </div>
+            <% } %>
+        </div>
+        <!---->
+        <% notes.forEach((item,i) => { %>
+        <audio class="sonidos" src="<%- links[i] %>" data-note="<%- item %>"></audio>
+        <% }); %>
+        <!---->
+    </script>
+    <!--end-template-->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
