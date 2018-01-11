@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="menu-container"></div>
+
+<script type="text/template" id="menu">
+    <div class="menu">
+        <h3 class="menu-title"><%- title %></h3>
+        <ul class="menu-list">
+            <% items.forEach(item => { %>
+            <li class="menu-item"><%- item %></li>
+            <% }); %>
+        </ul>
+    </div>
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
