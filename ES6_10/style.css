@@ -1,8 +1,8 @@
 .container {
   margin: 100px auto;
   padding: 10px;
-  width: 500px;
-  height: 200px;
+  width: 600px;
+  height: 235px;
   font-family: sans-serif;
   background: #F0E68C;
   box-shadow: 0 0 30px rgba(0,0,0,0.5);
@@ -10,7 +10,7 @@
 .container > * {
   margin: 0 auto;
   padding: 5px;
-  width: 260px;
+  width: 350px;
   text-align: center;
 
 }
@@ -26,7 +26,11 @@
 #keyboard {
   display: block;
 }
-
 #string,#keyboard, #result, #record {
   font-weight: 700;
+}
+#reset {
+  display: block;
+  margin: 5px auto;
+  width: 100px;
 }

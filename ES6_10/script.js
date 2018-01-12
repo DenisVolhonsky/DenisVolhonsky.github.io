@@ -25,36 +25,42 @@
 const string = "qwerty";
 const charsArr = string.split("").reverse();
 const timerOutput = document.querySelector(".timer");
-
 const inp= document.querySelector('#string');
-inp.innerHTML+= string;
-
-var time = document.querySelector('.timer');
-var s1=0, m1=0;
-
-
+let time = document.querySelector('.timer');
 let keyboard = document.querySelector('#keyboard');
+let result = document.querySelector('#result');
+
+let seconds=0, minutes=0;
+inp.innerHTML+= string;
 keyboard.value = '';
 
-let countKPS = () => {
+let countKPS = (timerID) => {
 
+    if (keyboard.value.length === 1) {
+            timerID = setInterval(() => {
+            time.innerHTML = `${minutes}:${seconds}`;
+            seconds++;
+            if(minutes == 60 || string === keyboard.value) {
+                clearInterval(timerID);
+                console.log('ok!');
+                result.innerText += `${minutes} минут ${seconds-1} сек.`;
+            }
+            else if(seconds%60 == 0) {
+                minutes++;
+                seconds=0;
+            }
+        }, 1000);
 
-        // setInterval(() => {
-        //     time.innerHTML = `${m1}:${s1}`;
-        //     s1++;
-        //     if (s1%60==0) {
-        //         m1++;
-        //         s1=0;
-        //     }
-        // }, 1000);
+    document.querySelector('#reset').onclick= function() {
 
+        clearInterval(timerID);
 
-
-        if(string === keyboard.value) {
-            console.log('ok!');
-        }
-
-
+    }
+    }
 }
 
+
 keyboard.addEventListener('keyup', countKPS);
+
+
+
