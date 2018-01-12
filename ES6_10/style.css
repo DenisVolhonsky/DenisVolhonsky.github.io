@@ -23,6 +23,9 @@
   text-align: center;
   font-size: 2rem;
 }
+#keyboard {
+  display: block;
+}
 
 #string,#keyboard, #result, #record {
   font-weight: 700;

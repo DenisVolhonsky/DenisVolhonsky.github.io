@@ -22,11 +22,39 @@
 // дается строка и от первого нажатия до посленего
 // правильного набранного знака считать время
 
-const string = "qwertyqr";
+const string = "qwerty";
 const charsArr = string.split("").reverse();
 const timerOutput = document.querySelector(".timer");
 
 const inp= document.querySelector('#string');
-    inp.innerHTML+= string;
+inp.innerHTML+= string;
+
+var time = document.querySelector('.timer');
+var s1=0, m1=0;
 
 
+let keyboard = document.querySelector('#keyboard');
+keyboard.value = '';
+
+let countKPS = () => {
+
+
+        // setInterval(() => {
+        //     time.innerHTML = `${m1}:${s1}`;
+        //     s1++;
+        //     if (s1%60==0) {
+        //         m1++;
+        //         s1=0;
+        //     }
+        // }, 1000);
+
+
+
+        if(string === keyboard.value) {
+            console.log('ok!');
+        }
+
+
+}
+
+keyboard.addEventListener('keyup', countKPS);
