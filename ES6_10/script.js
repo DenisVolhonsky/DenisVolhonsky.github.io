@@ -21,7 +21,12 @@
 
 // дается строка и от первого нажатия до посленего
 // правильного набранного знака считать время
-const lang = "qwerty";
-const string = "qryte";
+
+const string = "qwertyqr";
 const charsArr = string.split("").reverse();
 const timerOutput = document.querySelector(".timer");
+
+const inp= document.querySelector('#string');
+    inp.innerHTML+= string;
+
+
