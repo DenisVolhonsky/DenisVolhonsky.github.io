@@ -29,13 +29,6 @@ console.log(result);
 const container = document.querySelector('#keyboard-container');
 container.innerHTML = result;
 
-
-
-
-
-
-
-
 const playSound = note => {
     const audio = document.querySelector(`audio[data-note=${note}]`);
     audio.currentTime = 0;
