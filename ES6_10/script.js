@@ -23,18 +23,21 @@
 // правильного набранного знака считать время
 
 const string = "qwerty";
-const charsArr = string.split("").reverse();
 const timerOutput = document.querySelector(".timer");
 const inp= document.querySelector('#string');
 let time = document.querySelector('.timer');
 let keyboard = document.querySelector('#keyboard');
 let result = document.querySelector('#result');
 
+
+
 let seconds=0, minutes=0;
 inp.innerHTML+= string;
 keyboard.value = '';
+let timerID;
+let speed;
 
-let countKPS = (timerID) => {
+let countKPS = () => {
 
     if (keyboard.value.length === 1) {
             timerID = setInterval(() => {
@@ -42,25 +45,31 @@ let countKPS = (timerID) => {
             seconds++;
             if(minutes == 60 || string === keyboard.value) {
                 clearInterval(timerID);
-                console.log('ok!');
-                result.innerText += `${minutes} минут ${seconds-1} сек.`;
+                speed = string.length/((minutes*60)+(seconds-1));
+                result.innerText = `Ваш результат: ${speed} клав/сек.`;
             }
             else if(seconds%60 == 0) {
                 minutes++;
                 seconds=0;
             }
         }, 1000);
-
-    document.querySelector('#reset').onclick= function() {
-
-        clearInterval(timerID);
-
     }
-    }
+
 }
 
+document.querySelector('#reset').onclick= function() {
+    location.reload();
+
+}
 
 keyboard.addEventListener('keyup', countKPS);
 
 
 
+//
+// localStorage.setItem('record',speed);
+// const newRec = localStorage.getItem('record');
+// if(newRec > speed) {
+//     localStorage.setItem('record',speed);
+//     document.querySelector('#record').innerText = `Рекорд: ${newRec}`;
+// }
