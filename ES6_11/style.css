@@ -1,5 +1,5 @@
 .wrapper {
-    margin: 0 auto;
+    margin: 100px auto;
     padding: 10px;
     width: 570px;
     background: #d3d3d3;
@@ -27,7 +27,25 @@ table, table *  {
     border-collapse: collapse;
     text-align: center
 }
-.wrapper, btn {
-
+.wrapper {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+button {
+    padding: 5px;
+    border: #3F67CC;
+    border-radius: 4px;
+    background: #3F67CC;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 14px;
+}
+button:hover {
+    box-shadow: none;
+}
+.header {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-align: center;
 }
 
