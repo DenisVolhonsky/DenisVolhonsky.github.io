@@ -1,0 +1,33 @@
+.wrapper {
+    margin: 0 auto;
+    padding: 10px;
+    width: 570px;
+    background: #d3d3d3;
+    font-family: sans-serif;
+}
+.wrapper > * {
+    padding: 10px;
+    border: 1px solid #696969;
+}
+.frame{
+    background: #bdbdbd;
+}
+.frame>* {
+    display: block;
+    margin: 0 auto;
+}
+.users, .add, .remove {
+    margin-bottom: 10px;
+}
+table, table *  {
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #696969;
+    color: #3b3b3b;
+    border-collapse: collapse;
+    text-align: center
+}
+.wrapper, btn {
+
+}
+

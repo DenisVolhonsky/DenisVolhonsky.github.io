@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module 11(Rest)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="frame users">
+            <button id="user">Получить список всех пользователей</button><br>
+            <div class="list-users">
+                <table>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>scope</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="frame add">
+            <input type="text" name="" id="add-name">
+            <input type="text" name="" id="add-scope"><br>
+            <button id="add-user">Добавить пользователя</button>
+        </div>
+        <div class="frame remove">
+            <input type="text" name="" id="remove-id"><br>
+            <button id="remove">Удалить пользователя</button>
+        </div>
+        <div class="frame refresh">
+            <input type="text" name="" id="refresh-id">
+            <input type="text" name="" id="refresh-name">
+            <input type="text" name="" id="refresh-scope"><br>
+            <button id="refresh">Обновить данные пользователя</button>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
