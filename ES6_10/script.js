@@ -29,38 +29,44 @@ let time = document.querySelector('.timer');
 let keyboard = document.querySelector('#keyboard');
 let result = document.querySelector('#result');
 
-
-
-let seconds=0, minutes=0;
+let seconds=0, minutes=0, milisec=0;
 inp.innerHTML+= string;
 keyboard.value = '';
 let timerID;
-let speed;
+let keySec;
+let tolalSec;
 
 let countKPS = () => {
 
     if (keyboard.value.length === 1) {
             timerID = setInterval(() => {
-            time.innerHTML = `${minutes}:${seconds}`;
-            seconds++;
-            if(minutes == 60 || string === keyboard.value) {
+            time.innerHTML = `0${minutes}:0${seconds}:${milisec}`;
+            if(seconds>9) time.innerHTML = `0${minutes}:${seconds}:${milisec}`;
+            milisec++;
+            if (milisec%10 == 0) {
+                seconds++;
+                milisec=0;
+                if(seconds%60 == 0) {
+                    minutes++;
+                    seconds=0;
+                }
+            }
+            if(string === keyboard.value || minutes === 5) {
                 clearInterval(timerID);
-                speed = string.length/((minutes*60)+(seconds-1));
-                result.innerText = `Ваш результат: ${speed} клав/сек.`;
+
+                totalSec = (((minutes*600)+((seconds)*10)+(milisec-1))/10).toFixed(1);
+                keySec = (string.length/totalSec).toFixed(1);
+                result.innerText = `Ваш результат: ${keySec} клав/сек.`;
+
+                console.log(`Время: ${totalSec} сек`);
+                console.log(`Скорость: ${keySec} клав/сек`);
             }
-            else if(seconds%60 == 0) {
-                minutes++;
-                seconds=0;
-            }
-        }, 1000);
+        }, 100);
     }
 
 }
 
-document.querySelector('#reset').onclick= function() {
-    location.reload();
-
-}
+document.querySelector('#reset').onclick = () => location.reload();
 
 keyboard.addEventListener('keyup', countKPS);
 
