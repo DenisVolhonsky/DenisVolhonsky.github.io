@@ -23,23 +23,17 @@
 // правильного набранного знака считать время
 
 const string = "qwerty";
-const timerOutput = document.querySelector(".timer");
-const inp= document.querySelector('#string');
+document.querySelector('#string').innerHTML = string;
+
 let time = document.querySelector('.timer');
 let keyboard = document.querySelector('#keyboard');
 let result = document.querySelector('#result');
-
 let seconds=0, minutes=0, milisec=0;
-inp.innerHTML+= string;
-keyboard.value = '';
-let timerID;
 let keySec;
-let tolalSec;
 
 let countKPS = () => {
-
     if (keyboard.value.length === 1) {
-            timerID = setInterval(() => {
+        let timerID = setInterval(() => {
             time.innerHTML = `0${minutes}:0${seconds}:${milisec}`;
             if(seconds>9) time.innerHTML = `0${minutes}:${seconds}:${milisec}`;
             milisec++;
@@ -54,28 +48,21 @@ let countKPS = () => {
             if(string === keyboard.value || minutes === 5) {
                 clearInterval(timerID);
 
-                totalSec = (((minutes*600)+((seconds)*10)+(milisec-1))/10).toFixed(1);
+                let totalSec = (((minutes*600)+((seconds)*10)+(milisec-1))/10).toFixed(1);
                 keySec = (string.length/totalSec).toFixed(1);
                 result.innerText = `Ваш результат: ${keySec} клав/сек.`;
 
-                console.log(`Время: ${totalSec} сек`);
-                console.log(`Скорость: ${keySec} клав/сек`);
+                    if(keySec > localStorage.getItem('rez')) { //получаем начальное null, потом предыдущее знач
+                        localStorage.setItem('rez', keySec);   // устанавливаем
+                    }
             }
         }, 100);
     }
-
 }
 
+keyboard.addEventListener('keyup', countKPS);
 document.querySelector('#reset').onclick = () => location.reload();
 
-keyboard.addEventListener('keyup', countKPS);
-
-
-
-//
-// localStorage.setItem('record',speed);
-// const newRec = localStorage.getItem('record');
-// if(newRec > speed) {
-//     localStorage.setItem('record',speed);
-//     document.querySelector('#record').innerText = `Рекорд: ${newRec}`;
-// }
+if (localStorage.getItem('rez')!==null)
+document.querySelector('#record').innerText = `Рекорд: ${localStorage.getItem('rez')}`;
+else document.querySelector('#record').innerText = `Рекорд: `;
