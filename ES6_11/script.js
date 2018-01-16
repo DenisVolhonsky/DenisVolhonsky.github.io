@@ -11,7 +11,7 @@
 const btnUser = document.querySelector('#user');
 const btnAdd = document.querySelector('#add-user');
 const btnRemove = document.querySelector('#remove');
-const btnrRefresh = document.querySelector('#refresh');
+const btnRefresh = document.querySelector('#refresh');
 
 const tBody = document.querySelector('#js-tbody');
 const htmlTpl = document.querySelector('#table').textContent.trim(); // this is script
@@ -46,7 +46,7 @@ btnUser.addEventListener('click', getUser);
 let addUser = () => {
     const addName = document.querySelector('#add-name').value;
     const addScore = document.querySelector('#add-score').value;
-    const url = `http://fecore.net.ua/rest/?action=1&name=${addName}&score=${addScore}`;
+    const url = `http://fecore.net.ua/rest/?action=2&name=${addName}&score=${addScore}`;
 
     fetch(url)
         .catch(error => {
@@ -54,10 +54,12 @@ let addUser = () => {
         });
 }
 
-let addUser = () => {
-    const addName = document.querySelector('#add-name').value;
-    const addScore = document.querySelector('#add-score').value;
-    const url = `http://fecore.net.ua/rest/?action=1&name=${addName}&score=${addScore}`;
+btnAdd.addEventListener('click', addUser);
+btnAdd.addEventListener('click', getUser);
+
+let removeUser = () => {
+    const removeID = document.querySelector('#remove-id').value;
+    const url = `http://fecore.net.ua/rest/?action=3&id=${removeID}`;
 
     fetch(url)
         .catch(error => {
@@ -65,14 +67,24 @@ let addUser = () => {
         });
 }
 
+btnRemove.addEventListener('click', removeUser);
+btnRemove.addEventListener('click', getUser);
 
 
+let updateUser = () => {
+    const refreshID = document.querySelector('#refresh-id').value;
+    const refreshName = document.querySelector('#refresh-name').value;
+    const refreshScore = document.querySelector('#refresh-score').value;
+    const url = `http://fecore.net.ua/rest/?action=2&id=${refreshID}&name=${refreshName}&score${refreshScore}`;
 
+    fetch(url)
+        .catch(error => {
+            console.error("Error: ", error);
+        });
+}
 
-// let removeUser = (id) => {}
-// let updateUser = (id) => {}
-
-
+btnRefresh.addEventListener('click', updateUser);
+btnRefresh.addEventListener('click', getUser);
 
 
 
