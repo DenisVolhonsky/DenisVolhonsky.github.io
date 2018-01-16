@@ -7,9 +7,18 @@
 //     Сделать минимальный графический интерфейс в виде панели с полями и кнопками,
 //     а так же панелью для вывода результатов операций с REST сервисом.
 
+// globals
+const btnUser = document.querySelector('#user');
+const tbody = document.querySelector('#js-tbody');
+const htmlTpl = document.querySelector('#table').textContent.trim(); // this is script
+const compiled = _.template(htmlTpl);
 
-let getUser = () => {}
-let addUser = () => {}
-let removeUser = (id) => {}
-let updateUser = (id) => {}
+
+// let addUser = () => {}
+// let removeUser = (id) => {}
+// let updateUser = (id) => {}
+
+
+
+
 
