@@ -9,6 +9,10 @@
 
 // globals
 const btnUser = document.querySelector('#user');
+const btnAdd = document.querySelector('#add-user');
+const btnRemove = document.querySelector('#remove');
+const btnrRefresh = document.querySelector('#refresh');
+
 const tBody = document.querySelector('#js-tbody');
 const htmlTpl = document.querySelector('#table').textContent.trim(); // this is script
 const compiled = _.template(htmlTpl);
@@ -36,14 +40,35 @@ const getUser = () =>
             console.error("Error: ", error);
         });
 
-btnUser.addEventListener("click", getUser);
+btnUser.addEventListener('click', getUser);
+
+
+let addUser = () => {
+    const addName = document.querySelector('#add-name').value;
+    const addScore = document.querySelector('#add-score').value;
+    const url = `http://fecore.net.ua/rest/?action=1&name=${addName}&score=${addScore}`;
+
+    fetch(url)
+        .catch(error => {
+            console.error("Error: ", error);
+        });
+}
+
+let addUser = () => {
+    const addName = document.querySelector('#add-name').value;
+    const addScore = document.querySelector('#add-score').value;
+    const url = `http://fecore.net.ua/rest/?action=1&name=${addName}&score=${addScore}`;
+
+    fetch(url)
+        .catch(error => {
+            console.error("Error: ", error);
+        });
+}
 
 
 
 
 
-// let getUsers = () => {}
-// let addUser = () => {}
 // let removeUser = (id) => {}
 // let updateUser = (id) => {}
 
