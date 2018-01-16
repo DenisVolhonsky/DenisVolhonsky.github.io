@@ -9,11 +9,40 @@
 
 // globals
 const btnUser = document.querySelector('#user');
-const tbody = document.querySelector('#js-tbody');
+const tBody = document.querySelector('#js-tbody');
 const htmlTpl = document.querySelector('#table').textContent.trim(); // this is script
 const compiled = _.template(htmlTpl);
 
+const updateView = users => {
+    let htmlString = "";
 
+    users.forEach(user => {
+        htmlString += compiled(user);
+    });
+
+    tBody.innerHTML = htmlString;
+};
+
+const getUser = () =>
+    fetch("http://fecore.net.ua/rest/")
+        .then(response => {
+            if (response.ok) return response.json();
+            throw new Error("Error");
+        })
+        .then(data => {
+            updateView(data);
+        })
+        .catch(error => {
+            console.error("Error: ", error);
+        });
+
+btnUser.addEventListener("click", getUser);
+
+
+
+
+
+// let getUsers = () => {}
 // let addUser = () => {}
 // let removeUser = (id) => {}
 // let updateUser = (id) => {}
