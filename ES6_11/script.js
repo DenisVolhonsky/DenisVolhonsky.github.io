@@ -59,6 +59,7 @@ let addUser = () => {
 btnAdd.addEventListener('click', addUser);
 btnAdd.addEventListener('click', getUser);
 
+
 let removeUser = () => {
     let removeID = document.querySelector('#remove-id').value;
     const url = `http://fecore.net.ua/rest/?action=3&id=${removeID}`;
