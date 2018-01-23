@@ -1,5 +1,4 @@
 /*
-
   Напишите функцию validate которая проверяет все поля формы
   и возвращает результат в виде обьекта со свойствами firstname,
   lastname и tel.
@@ -56,3 +55,4 @@ let showResults= results => {
 }
 
 submitBtn.addEventListener("click", ()=>showResults(validate()));
+
