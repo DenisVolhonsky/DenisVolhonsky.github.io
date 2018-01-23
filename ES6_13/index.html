@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 13</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form class="col s12 m6" acrion="#">
+                <div class="row">
+                    <div class="input-field col s9">
+                        <input placeholder="First name" id="first_name" type="text" class="validate">
+                        <label for="first_name"></label>
+                    </div>
+                    <div class="input-field col s9">
+                        <input placeholder="Last name" id="last_name" type="text" class="validate">
+                        <label for="last_name"></label>
+                    </div>
+                    <div class="input-field col s9">
+                        <input placeholder="tel +xxx xx xx xx xxx" id="tel" type="text" class="validate">
+                        <label for="tel"></label>
+                    </div>
+                    <div class="col s9">
+                        <button class="btn waves-effect waves-light" id="submit-btn" type="submit" name="action">Submit
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <ul class="results col s12">
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
