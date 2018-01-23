@@ -8,7 +8,7 @@
   уведомляющий о статусе прохождения валидации для поля.
 
   При клике на кнопку submit должна происходить проверка.
-///////////////////////////////////////////////////////////////
+
   Визуализировать результат проверки.
     Написать функцию showResults(results), которая принимает
     один аргумент results - объект такого формата который возвращает
@@ -30,30 +30,29 @@ const submitBtn = document.getElementById("submit-btn");
 const resultsList = document.querySelector(".results");
 
 
-function validate(evt) {
+let validate=()=> {
 
     const regFirstName= /^[A-Z][a-z]{1,20}$/;
     const regLastName= /^[A-Z][a-z]{1,20}$/;
     const regTel= /^\+?3?8?0{1}[1-9]{1}[0-9]{8}$/;
-
-
     let data = {
-        firstname: regFirstName.test(this.firstname),
-        lastname: regLastName.test(this.lastname),
-        phone: regTel.test(this.phone)
+        firstname: regFirstName.test(firstName.value),
+        lastname: regLastName.test(lastName.value),
+        phone: regTel.test(tel.value)
     }
-    console.log(data);
-    // console.log(regFirstName.test(data.firstname));
-    // console.log(regLastName.test(data.lastname));
-    // console.log(regTel.test(data.phone));
+    return data;
 }
 
+let showResults= results => {
+    for(let data in results){
+        console.log(results[data]);
+        if(results[data] === true) {
+            resultsList.innerHTML+= `<li class="success">SUCCESS: ${data} passed validation</li>`;
+        }
+        else {
+            resultsList.innerHTML+= `<li class="error">ERROR: ${data} failed validation</li>`;
+        }
+    }
+}
 
-
-
-
-submitBtn.addEventListener("click", validate);
-
-
-
-function showResults(results) {}
+submitBtn.addEventListener("click", ()=>showResults(validate()));
