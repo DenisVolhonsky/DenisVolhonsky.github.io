@@ -1,5 +1,4 @@
 /*
-  Соединить задание 1 и 2
 
   Напишите функцию validate которая проверяет все поля формы
   и возвращает результат в виде обьекта со свойствами firstname,
@@ -24,9 +23,8 @@
     Для li с положительным результатом дать класс success,
     с отрицательным error.
 */
-
-const firstname = document.getElementById("first_name");
-const lastname = document.getElementById("last_name");
+const firstName = document.getElementById("first_name");
+const lastName = document.getElementById("last_name");
 const tel = document.getElementById("tel");
 const submitBtn = document.getElementById("submit-btn");
 const resultsList = document.querySelector(".results");
@@ -34,15 +32,24 @@ const resultsList = document.querySelector(".results");
 
 function validate(evt) {
 
+    const regFirstName= /^[A-Z][a-z]{1,20}$/;
+    const regLastName= /^[A-Z][a-z]{1,20}$/;
+    const regTel= /^\+?3?8?0{1}[1-9]{1}[0-9]{8}$/;
 
 
+    let data = {
+        firstname: regFirstName.test(this.firstname),
+        lastname: regLastName.test(this.lastname),
+        phone: regTel.test(this.phone)
+    }
+    console.log(data);
+    // console.log(regFirstName.test(data.firstname));
+    // console.log(regLastName.test(data.lastname));
+    // console.log(regTel.test(data.phone));
 }
 
-let data = {
-    firstName: firstname,
-    lastName: lastname,
-    tel: tel
-}
+
+
 
 
 submitBtn.addEventListener("click", validate);
