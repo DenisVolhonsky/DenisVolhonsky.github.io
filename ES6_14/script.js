@@ -4,6 +4,11 @@
 //     При нажатии на кнопку stop, функция сохраняет значение текущего момента времени в stopTime и записывает разницу между startTime и stopTime в interval.
 //     При нажатии на stop, значение interval выводится в консоль.
 
+const startBtn = document.querySelector('#start');
+const stopBtn = document.querySelector('#stop');
+const firstTime = document.querySelector('#start-time');
+const stopTime = document.querySelector('#stop-time');
+
 function Timer() {
     this.startTime = '';
     this.stopTime = '';
@@ -11,18 +16,29 @@ function Timer() {
 }
 
 
-
 Timer.prototype.start = function () {
-    console.log(1);
+
+    timer.startTime = new Date();
+    firstTime.innerHTML=`${timer.startTime.getHours()}:${timer.startTime.getMinutes()}:${timer.startTime.getSeconds()}`;
+
+
+
 }
-Timer.prototype.stop.stop = function () {
-    console.log(2);
+
+Timer.prototype.stop = function () {
+
+    timer.stopTime = new Date();
+    stopTime.innerHTML=`${timer.stopTime.getHours()}:${timer.stopTime.getMinutes()}:${timer.stopTime.getSeconds()}`;
+    timer.interval=((timer.stopTime-timer.startTime)/1000).toFixed(1);
+    console.log(`Интервал равен: ${timer.interval} cек.`);
+
 }
 
 let timer = new Timer();
 
+startBtn.addEventListener('click', timer.start);
+stopBtn.addEventListener('click', timer.stop);
 
-console.log(timer);
 
 
 
