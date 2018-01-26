@@ -24,7 +24,7 @@ Timer.prototype.stop =()=> {
     timer.stopTime = new Date();
     stopTime.innerHTML=`${timer.stopTime.getHours()}:${timer.stopTime.getMinutes()}:${timer.stopTime.getSeconds()}`;
     timer.interval=((timer.stopTime-timer.startTime)/1000).toFixed(1);
-    console.log(timer);
+    console.log(`Интервал равен: ${timer.interval} cек.`);
 }
 
 let timer = new Timer();
