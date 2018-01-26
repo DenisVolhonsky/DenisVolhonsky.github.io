@@ -15,23 +15,16 @@ function Timer() {
     this.interval= ''; // вывод в консоль
 }
 
-
-Timer.prototype.start = function () {
-
+Timer.prototype.start =()=>{
     timer.startTime = new Date();
     firstTime.innerHTML=`${timer.startTime.getHours()}:${timer.startTime.getMinutes()}:${timer.startTime.getSeconds()}`;
-
-
-
 }
 
-Timer.prototype.stop = function () {
-
+Timer.prototype.stop =()=> {
     timer.stopTime = new Date();
     stopTime.innerHTML=`${timer.stopTime.getHours()}:${timer.stopTime.getMinutes()}:${timer.stopTime.getSeconds()}`;
     timer.interval=((timer.stopTime-timer.startTime)/1000).toFixed(1);
-    console.log(`Интервал равен: ${timer.interval} cек.`);
-
+    console.log(timer);
 }
 
 let timer = new Timer();
