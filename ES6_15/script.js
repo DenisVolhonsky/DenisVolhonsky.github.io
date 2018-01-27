@@ -66,6 +66,10 @@ class Timer {
     getTime(){
         console.log(stopWatch.interval);
     }
+    static timeToNY() {
+
+        console.log(`До Нового Года осталось: `);
+    }
 }
 
 stopWatch = new Timer(); // экземпляр класса
@@ -77,3 +81,4 @@ startBtn.addEventListener('click', stopWatch.start);
 stopBtn.addEventListener('click', stopWatch.stop);
 stopBtn.addEventListener('click', stopWatch.getTime);
 
+Timer.timeToNY();
