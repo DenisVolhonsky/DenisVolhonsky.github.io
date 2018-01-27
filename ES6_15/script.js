@@ -67,12 +67,14 @@ class Timer {
         console.log(stopWatch.interval);
     }
     static timeToNY() {
-
-        console.log(`До Нового Года осталось: `);
+        const today = +new Date();
+        const dateNY = +new Date(2019, 0, 1);
+        let untilNY = Math.round((dateNY-today)/8.64E+7);
+        console.log(`До Нового Года осталось: ${untilNY} дней`);
     }
 }
 
-stopWatch = new Timer(); // экземпляр класса
+stopWatch = new Timer(); // экземпляр класса - объект
 
 //console.log(stopWatch.startTime, stopWatch.stopTime, stopWatch.interval);
 
