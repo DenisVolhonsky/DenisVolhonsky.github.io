@@ -8,6 +8,7 @@ const startBtn = document.querySelector('#start');
 const stopBtn = document.querySelector('#stop');
 const firstTime = document.querySelector('#start-time');
 const stopTime = document.querySelector('#stop-time');
+const newYear = document.querySelector('#new-year');
 
 // function Timer() {
 //     this.startTime = '';
@@ -55,16 +56,16 @@ class Timer {
     start() {
         stopWatch.startTime = new Date();
         firstTime.innerHTML=`${stopWatch.startTime.getHours()}:${stopWatch.startTime.getMinutes()}:${stopWatch.startTime.getSeconds()}`;
-        console.log(stopWatch.startTime);
+        //console.log(stopWatch.startTime);
     }
     stop() {
         stopWatch.stopTime = new Date();
-        console.log(stopWatch.stopTime);
+        //console.log(stopWatch.stopTime);
         stopTime.innerHTML=`${stopWatch.stopTime.getHours()}:${stopWatch.stopTime.getMinutes()}:${stopWatch.stopTime.getSeconds()}`;
         stopWatch.interval=((stopWatch.stopTime-stopWatch.startTime)/1000).toFixed(1);
     }
     getTime(){
-        console.log(stopWatch.interval);
+        console.log(`Интервал равен: ${stopWatch.interval} cек.`);
     }
     static timeToNY() {
         const today = +new Date();
@@ -76,11 +77,8 @@ class Timer {
 
 stopWatch = new Timer(); // экземпляр класса - объект
 
-//console.log(stopWatch.startTime, stopWatch.stopTime, stopWatch.interval);
-
-
 startBtn.addEventListener('click', stopWatch.start);
 stopBtn.addEventListener('click', stopWatch.stop);
 stopBtn.addEventListener('click', stopWatch.getTime);
+newYear.addEventListener('click', Timer.timeToNY);
 
-Timer.timeToNY();

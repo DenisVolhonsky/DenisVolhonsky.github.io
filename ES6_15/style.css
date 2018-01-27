@@ -32,6 +32,11 @@ button {
     border: red;
     font-size: 16px;
 }
+#new-year {
+    background: darkblue;
+    border: darkblue;
+    font-size: 16px;
+}
 .out {
     border: 1px solid black;
     width: 100px;
