@@ -48,10 +48,19 @@ const stopTime = document.querySelector('#stop-time');
 
 
 class Timer {
-    constructor(){
+    constructor() {
         this.startTime = 1;
         this.stopTime = 2;
-        this.interval= 3; // вывод в консоль
+        this.interval = 3; // вывод в консоль
+    }
+    start() {
+        console.log('start');
+    }
+    stop() {
+        console.log('stop');
+    }
+    getTime(){
+        console.log('getTime');
     }
 
 }
@@ -63,5 +72,6 @@ timer3= new Timer();
 console.log(timer1.startTime, timer2.stopTime, timer3.interval);
 
 
-
+startBtn.addEventListener('click', timer1.start);
+stopBtn.addEventListener('click', timer1.stop);
 
