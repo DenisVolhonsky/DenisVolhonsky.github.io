@@ -42,7 +42,6 @@ const stopTime = document.querySelector('#stop-time');
 //     нажатия в свойство startTime.
 //     При нажатии на кнопку stop, метод stopwatch.stop сохраняет значение текущего момента
 //     времени в stopTime и записывает разницу между startTime и stopTime в interval.
-
 //     А метод stopwatch.getTime возвращает значение поля interval, которое необходимо вывести в консоль.
 //     Для класса Timer создать статический метод timeToNY который возвращает кол-во дней от сегодня и до Нового Года.
 
@@ -63,12 +62,10 @@ class Timer {
         console.log(stopWatch.stopTime);
         stopTime.innerHTML=`${stopWatch.stopTime.getHours()}:${stopWatch.stopTime.getMinutes()}:${stopWatch.stopTime.getSeconds()}`;
         stopWatch.interval=((stopWatch.stopTime-stopWatch.startTime)/1000).toFixed(1);
-        console.log(stopWatch.interval);
     }
     getTime(){
-
+        console.log(stopWatch.interval);
     }
-
 }
 
 stopWatch = new Timer(); // экземпляр класса
@@ -78,4 +75,5 @@ stopWatch = new Timer(); // экземпляр класса
 
 startBtn.addEventListener('click', stopWatch.start);
 stopBtn.addEventListener('click', stopWatch.stop);
+stopBtn.addEventListener('click', stopWatch.getTime);
 
