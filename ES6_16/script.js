@@ -10,7 +10,7 @@
 //     принимая значения цвета и начальных координат, как его родительский класс,
 //      и еще значение ширины и высоты сторон initWidth и initHeight:
 //  Создать методы класса Rectangle:
-//     setWidth(newWidth)и setHeight(newHeight) - получают ширину/высоту и записывают
+//     setWidth(newWidth) и setHeight(newHeight) - получают ширину/высоту и записывают
 //     новые значения.
 //     getDims() - метод который возвращает значения width и height.
 //     draw() - метод который имитирует рисование прямоугольника используя методы
@@ -25,11 +25,47 @@
 
 class Shape {
     constructor(color, initX, initY){
-        this.color = color;
-        this.initX = initX;
-        this.initY = initY;
+        this.color = 'red';
+        this.initX = '12';
+        this.initY = '10';
     }
-    getColor() {}
-    setColor(val) {}
-    getCoords() {}
+    getColor() {
+        console.log(`Цвет: ${this.color}`);
+    }
+    setColor(val) {
+
+    }
+    getCoords() {
+        console.log(`Координата X: ${this.initX}, Координата Y: ${this.initY}`);
+    }
+    moveTo(newX, newY) {
+
+    }
+
 }
+
+class Rectangle extends Shape {
+    constructor(params, initWidth, initHeight){
+        super(params);
+        this.initWidth = initWidth;
+        this.initHeight = initHeight;
+    }
+    setWidth(newWidth){
+
+    }
+    setHeight(newHeight) {
+
+    }
+    getDims(){
+        console.log(`Высота прямоугольника: ${this.initWidth}, ширина: ${this.initHeight}`);
+    }
+    draw() {   // смотри скриншот
+        console.log();
+    }
+
+
+}
+
+
+let rec = new Rectangle();
+console.log(rec);
