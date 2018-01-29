@@ -1,0 +1,46 @@
+*{
+    font-family: sans-serif;
+}
+.container {
+    margin: 100px auto;
+    padding: 20px;
+    width: 400px;
+    border: 1px solid black;
+    background: #bdbdbd;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+.container>*{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+button {
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 14px;
+}
+#start {
+    background: forestgreen;
+    border: forestgreen;;
+    font-size: 16px;
+}
+#stop {
+    background: red;
+    border: red;
+    font-size: 16px;
+}
+#new-year {
+    background: darkblue;
+    border: darkblue;
+    font-size: 16px;
+}
+.out {
+    border: 1px solid black;
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    font-size: 26px;
+}
