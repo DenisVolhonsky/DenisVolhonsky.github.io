@@ -62,10 +62,26 @@ class Rectangle extends Shape {
     draw() {   // смотри скриншот
         console.log();
     }
-
-
 }
 
+class Circle extends Shape {
+    constructor(params, initRadius){
+        super(params);
+        this.initRadius = initRadius;
+    }
+    getRadius(){
+        console.log(`Радиус круга равен: ${this.initRadius}`);
+    }
+    setRadius(val){
 
-let rec = new Rectangle();
-console.log(rec);
+    }
+    draw(){    // смотри скриншот
+
+    }
+}
+
+let rectangle = new Rectangle();
+let circle = new Circle();
+
+console.log(rectangle);
+console.log(circle);
