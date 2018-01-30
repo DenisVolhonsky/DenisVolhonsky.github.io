@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homework_15 (Classes)</title>
+    <title>Homework_16 (Classes)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h2>Timer</h2>
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
-        <span>Start time:</span><p class="out" id="start-time"></p>
-        <span>Stop time:</span><p class="out" id="stop-time"></p>
-        <button id="new-year">days Before NY</button>
+        <h4>Class Shape</h4>
+        <div><span>Установить цвет: </span><input type="text" name="" id="shape-color"></div>
+        <div><span>Установить начальные координаты X: </span>
+            <input type="text" name="" id="shape-x"><br>
+            <span>Установить начальные координаты Y: </span>
+            <input type="text" name="" id="shape-y">
+        </div>
+        <button id="shape-save">Сохранить</button>
+        <h4>Class Rectangle</h4>
+        <div><span>Установить ширину: </span>
+            <input type="text" name="" id="width"><br>
+            <span>Установить высоту: </span>
+            <input type="text" name="" id="height">
+        </div>
+        <button id="rect-save">Сохранить и вывести результат</button>
+        <h4>Class Circle</h4>
+        <div><span>Задать радиус: </span>
+            <input type="text" name="" id="radius">
+        </div>
+        <button id="rect-save">Сохранить и вывести результат</button>
     </div>
     <script src="script.js"></script>
 </body>
