@@ -62,7 +62,7 @@ class Shape {
 }
 
 let shape = new Shape();
-console.log(`Св-ва экземпляра по умолчанию:`);
+console.log(`Св-ва класса Shape по умолчанию:`);
 console.log(shape);
 
 shapeSave.addEventListener('click', ()=> [shape.setColor(shapeColor.value),shape.moveTo(shapeX.value, shapeY.value)]);
@@ -96,31 +96,37 @@ class Rectangle extends Shape {
 }
 
 let rectangle = new Rectangle();
-rectSave.addEventListener('click', ()=>[rectangle.setWidth(rectWidth.value),rectangle.setHeight(rectHeight.value),rectangle.getDims(),rectangle.draw()]);
-
+console.log(`Св-ва класса Rectangle по умолчанию:`);
+console.log(rectangle);
+rectSave.addEventListener('click', ()=>[rectangle.setWidth(rectWidth.value),rectangle.setHeight(rectHeight.value),rectangle.getDims(),rectangle.draw(), console.log(rectangle)]);
 
 class Circle extends Shape {
-    constructor(params, initRadius){
-        super(params);
-        this.initRadius = initRadius;
+    constructor(){
+        super();
+        this.initRadius = 25;
     }
     getRadius(){
         console.log(`Радиус круга равен: ${this.initRadius}`);
     }
     setRadius(val){
-
+        this.initRadius = val;
     }
     draw(){
-
+        outCircle.innerText =
+        `Drawing a Circle at:
+        (x: ${this.initX}, y: ${this.initY})
+        With dimentions:
+        radius: ${this.initRadius}
+        Filled with color: ${this.color}
+        `;
     }
 }
 
-
-
 let circle = new Circle();
+console.log(`Св-ва класса Circle по умолчанию:`);
+console.log(circle);
 
-
-
+circleSave.addEventListener('click', ()=>[circle.setRadius(circRadius.value),circle.draw(),circle.getRadius(),console.log(circle)]);
 
 
 
