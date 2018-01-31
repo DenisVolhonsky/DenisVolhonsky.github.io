@@ -5,15 +5,15 @@
 // Просьба присылать ссылку на рабочий пример, который мы можем протестировать.
 // Не блокировать нативный скейл.
 
-
-
-    window.onscroll = function() {myFunction()};
-
-var header = document.getElementById("myHeader");
+var header = document.querySelector("#myHeader");
 var sticky = header.offsetTop;
+console.log(sticky);
+
+document.body.onscroll = function() {myFunction()};
 
 function myFunction() {
-    if (window.pageYOffset >= sticky) {
+    var scrollTop = window.pageYOffset || document.body.scrollTop;
+    if (scrollTop >= sticky) {
         header.classList.add("sticky");
     } else {
         header.classList.remove("sticky");
