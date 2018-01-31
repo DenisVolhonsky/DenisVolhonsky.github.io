@@ -7,11 +7,11 @@
 
 var header = document.querySelector("#myHeader");
 var sticky = header.offsetTop;
-console.log(sticky);
+// console.log(sticky);
 
-document.body.onscroll = function() {myFunction()};
+document.body.ontouchmove = function() {stickyEffect()};
 
-function myFunction() {
+function stickyEffect() {
     var scrollTop = window.pageYOffset || document.body.scrollTop;
     if (scrollTop >= sticky) {
         header.classList.add("sticky");
@@ -19,3 +19,5 @@ function myFunction() {
         header.classList.remove("sticky");
     }
 }
+
+//document.body.addEventListener('scroll', stickyEffect);
