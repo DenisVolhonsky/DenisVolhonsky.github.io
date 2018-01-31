@@ -21,3 +21,4 @@ function stickyEffect() {
 }
 
 window.addEventListener('scroll', ()=>stickyEffect());
+window.addEventListener('gesturechange', ()=>stickyEffect());
