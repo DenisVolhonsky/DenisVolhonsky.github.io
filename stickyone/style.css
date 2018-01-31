@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-color: blue;
+    height: 300px;
+}
+nav, footer {
+    background-color: #333;
+    padding: 40px 0;
+    //text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+nav.fixed {
+    position: fixed !important;
+    top: 0;
+}
+article {
+    background-color: green;
+    height: 2000px;
+}
+footer {
+    background-color: purple;
+}

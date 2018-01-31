@@ -11,6 +11,8 @@ body {
 
 .header {
     transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
     padding: 10px 16px;
     background: #ff4683;
 }
@@ -21,10 +23,17 @@ body {
 
 .sticky {
     position: fixed;
-    top: inherit;
+    top: 0;
     width: 100%;
 }
 
 .sticky + .content {
     padding-top: 102px;
+}
+
+@media only screen and (max-width: 768px){
+    .sticky {
+        position:fixed !important;
+        top:0px; !important;
+    }
 }
