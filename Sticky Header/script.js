@@ -9,7 +9,13 @@ var header = document.querySelector("#myHeader");
 var sticky = header.offsetTop;
 // console.log(sticky);
 
-//document.body.ontouchmove = function() {stickyEffect()};
+
+
+// if (navigator.userAgent.match("Apple") == null) {
+//
+// }
+
+window.onscroll = function() {stickyEffect()};
 
 function stickyEffect() {
     var scrollTop = window.pageYOffset || document.body.scrollTop;
@@ -20,5 +26,27 @@ function stickyEffect() {
     }
 }
 
-window.addEventListener('scroll', ()=>stickyEffect());
-window.addEventListener('gesturechange', ()=>stickyEffect());
+
+
+
+
+
+
+
+//
+// function touchScroll(id){
+//     var el=document.getElementById(id);
+//     var scrollStartPos=0;
+//
+//     document.getElementById(id).addEventListener("touchstart", function(event) {
+//         scrollStartPos=this.scrollTop+event.touches[0].pageY;
+//         event.preventDefault();
+//     },false);
+//
+//     document.getElementById(id).addEventListener("touchmove", function(event) {
+//         this.scrollTop=scrollStartPos-event.touches[0].pageY;
+//         event.preventDefault();
+//     },false);
+// }
+
+

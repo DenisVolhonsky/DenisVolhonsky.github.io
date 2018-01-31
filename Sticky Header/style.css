@@ -10,6 +10,7 @@ body {
 }
 
 .header {
+    transform: translate3d(0,0,0);
     padding: 10px 16px;
     background: #ff4683;
 }
