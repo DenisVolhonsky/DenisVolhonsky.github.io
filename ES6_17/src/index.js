@@ -15,6 +15,7 @@ class Shape {
     if(typeof element === 'undefined') return;
     // instanceof
     element.style.backgroundColor = color;
+    element.style.opacity = "0.5";
     this.element = element;
     this.render();
     this.element.addEventListener("click", ()=> this.smaller()); // 1й вариант
@@ -95,6 +96,6 @@ class Triangle extends Shape{
 let s = new Square;
 let c = new Circle('red');
 let t = new Triangle;
-let c1 = new Circle('green');
+let c1 = new Circle('blueviolet');
 
 

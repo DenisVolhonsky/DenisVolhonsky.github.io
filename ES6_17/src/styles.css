@@ -19,8 +19,9 @@ body {
   background-repeat: no-repeat;
 }
 
-.header {
+.header, h3 {
   text-align: center;
   color: gold;
   margin: 30px;
 }
+
