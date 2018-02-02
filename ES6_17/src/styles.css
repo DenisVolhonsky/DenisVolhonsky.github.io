@@ -10,13 +10,17 @@ html {
   margin: 0;
 }
 body {
+  text-align: center;
   min-height: 100vh;
-  background-color: #ffffff;
+  //background-color: #ffffff;
   background-image: url('./images/bg.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-#q {
-  color: white;
+
+.header {
+  text-align: center;
+  color: gold;
+  margin: 30px;
 }
