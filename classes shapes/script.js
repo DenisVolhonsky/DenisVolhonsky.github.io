@@ -1,5 +1,6 @@
 // при первом уменьшие если нажата правая кнопка то увеличивает фигуру
 
+
 class Shape {
     constructor(color, element){ // element = DOM ELEMENT
         if(typeof element === 'undefined') return;
@@ -16,10 +17,11 @@ class Shape {
     }
 
     smaller(){
+        console.log(this instanceof Triangle);
         this.element.style.width = '50px';
         this.element.style.height = '50px';
-        if(this === t){
-            console.log(this);
+        if(this instanceof Triangle){
+            //console.log(this);
             this.element.style.height = "0";
             this.element.style.width = "0";
             this.element.style.borderLeft = '25px solid transparent';
@@ -30,10 +32,12 @@ class Shape {
     }
     bigger(event){
         event.preventDefault();
+        console.log(this instanceof Triangle);
         this.element.style.width = '100px';
         this.element.style.height = '100px';
-        if(this === t){
-            console.log(this);
+        if(this instanceof Triangle){
+            //console.log(this);
+
             this.element.style.height = "0";
             this.element.style.width = "0";
             this.element.style.borderLeft = '50px solid transparent';
@@ -85,5 +89,6 @@ let s = new Square;
 let c = new Circle('red');
 let t = new Triangle;
 let c1 = new Circle('green');
+let t1 = new Triangle;
 
 

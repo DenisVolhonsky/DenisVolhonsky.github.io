@@ -16,9 +16,11 @@ class Shape {
   }
 
   smaller(){
+    console.log(this);
+    console.log(this instanceof Triangle);
     this.element.style.width = '50px';
     this.element.style.height = '50px';
-    if(this === t){
+    if(this == t){
       console.log(this);
       this.element.style.height = "0";
       this.element.style.width = "0";
