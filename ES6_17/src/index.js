@@ -13,6 +13,7 @@ let s = new Square;
 let c = new Circle('red');
 let t = new Triangle;
 let c1 = new Circle('blueviolet');
+let t1 = new Triangle;
 
 
 

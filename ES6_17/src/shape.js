@@ -1,4 +1,4 @@
-
+import Triangle from 'triangle';
 class Shape {
   constructor(color, element){ // element = DOM ELEMENT
     if(typeof element === 'undefined') return;
@@ -16,12 +16,9 @@ class Shape {
   }
 
   smaller(){
-    console.log(this);
-    console.log(this instanceof Triangle);
     this.element.style.width = '50px';
     this.element.style.height = '50px';
-    if(this == t){
-      console.log(this);
+    if(this instanceof Triangle){
       this.element.style.height = "0";
       this.element.style.width = "0";
       this.element.style.borderLeft = '25px solid transparent';
@@ -34,8 +31,7 @@ class Shape {
     event.preventDefault();
     this.element.style.width = '100px';
     this.element.style.height = '100px';
-    if(this === t){
-      console.log(this);
+    if(this instanceof Triangle){
       this.element.style.height = "0";
       this.element.style.width = "0";
       this.element.style.borderLeft = '50px solid transparent';
