@@ -1,0 +1,21 @@
+html, body, .block {
+    height: 100%;
+}
+.pin-top {
+    position: relative;
+}
+
+.pin-bottom {
+    position: relative;
+}
+
+.pinned {
+    position: fixed !important;
+}
+.upper {
+    height: 200px;
+}
+.upper{
+    padding-top: 30px;
+    text-align: center;
+}

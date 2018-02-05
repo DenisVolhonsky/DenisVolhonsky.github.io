@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path');  // импорты как в Common JS
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -7,13 +7,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SRC_DIR = path.resolve(__dirname, 'src');
 const DIST_DIR = path.resolve(__dirname, 'dist');
 
-module.exports = {
-  context: SRC_DIR,
+module.exports = {    // експортируем модуль
+  context: SRC_DIR,  // где находится path.resolve(__dirname, 'src');
   entry: {
     app: ['babel-polyfill', './index.js']
   },
   output: {
-    path: DIST_DIR,
+    path: DIST_DIR,  // куда перенести path.resolve(__dirname, 'dist');
     filename: '[name].js',
     publicPath: ''
   },
@@ -22,7 +22,7 @@ module.exports = {
       {
         test: /\.js$/,
         include: SRC_DIR,
-        use: ['babel-loader']
+        use: ['babel-loader'] // какие пакеты используются
       },
       {
         test: /\.css$/,
